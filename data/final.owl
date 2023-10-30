@@ -1,0 +1,1831 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY ns1 "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY ont "http://www.co-ode.org/ontologies/ont.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.example.org/ontology#"
+     xml:base="http://www.example.org/ontology"
+     xmlns:ns1="http://www.w3.org/2002/07/owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ont="http://www.co-ode.org/ontologies/ont.owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.example.org/ontology#assigns -->
+
+    <ns1:ObjectProperty rdf:about="http://www.example.org/ontology#assigns">
+        <rdfs:range rdf:resource="http://www.example.org/ontology#Forum"/>
+    </ns1:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/ontology#belongs -->
+
+    <ns1:ObjectProperty rdf:about="http://www.example.org/ontology#belongs">
+        <rdfs:domain rdf:resource="http://www.example.org/ontology#Forum"/>
+        <rdfs:domain rdf:resource="http://www.example.org/ontology#Product"/>
+        <rdfs:domain rdf:resource="http://www.example.org/ontology#Review"/>
+        <rdfs:range rdf:resource="http://www.example.org/ontology#User"/>
+    </ns1:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/ontology#collects -->
+
+    <ns1:ObjectProperty rdf:about="http://www.example.org/ontology#collects">
+        <rdfs:domain rdf:resource="http://www.example.org/ontology#ReportSys"/>
+        <rdfs:range rdf:resource="http://www.example.org/ontology#User"/>
+    </ns1:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/ontology#contacts -->
+
+    <ns1:ObjectProperty rdf:about="http://www.example.org/ontology#contacts">
+        <rdfs:range rdf:resource="http://www.example.org/ontology#Forum"/>
+        <rdfs:domain rdf:resource="http://www.example.org/ontology#User"/>
+    </ns1:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/ontology#contains -->
+
+    <ns1:ObjectProperty rdf:about="http://www.example.org/ontology#contains">
+        <rdfs:domain rdf:resource="http://www.example.org/ontology#Inventory"/>
+        <rdfs:range rdf:resource="http://www.example.org/ontology#Product"/>
+    </ns1:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/ontology#creates -->
+
+    <ns1:ObjectProperty rdf:about="http://www.example.org/ontology#creates">
+        <rdfs:range rdf:resource="http://www.example.org/ontology#Forum"/>
+        <rdfs:domain rdf:resource="http://www.example.org/ontology#User"/>
+    </ns1:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/ontology#governs -->
+
+    <ns1:ObjectProperty rdf:about="http://www.example.org/ontology#governs">
+        <rdfs:range rdf:resource="http://www.example.org/ontology#Contract"/>
+        <rdfs:domain rdf:resource="http://www.example.org/ontology#Offer"/>
+    </ns1:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/ontology#initiates -->
+
+    <ns1:ObjectProperty rdf:about="http://www.example.org/ontology#initiates">
+        <rdfs:range rdf:resource="http://www.example.org/ontology#Request"/>
+        <rdfs:domain rdf:resource="http://www.example.org/ontology#User"/>
+    </ns1:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/ontology#involves -->
+
+    <ns1:ObjectProperty rdf:about="http://www.example.org/ontology#involves">
+        <rdfs:domain rdf:resource="http://www.example.org/ontology#Offer"/>
+        <rdfs:range rdf:resource="http://www.example.org/ontology#Product"/>
+        <rdfs:domain rdf:resource="http://www.example.org/ontology#Request"/>
+        <rdfs:range rdf:resource="http://www.example.org/ontology#User"/>
+    </ns1:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/ontology#manages -->
+
+    <ns1:ObjectProperty rdf:about="http://www.example.org/ontology#manages">
+        <rdfs:range rdf:resource="http://www.example.org/ontology#ReportSys"/>
+    </ns1:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/ontology#owned -->
+
+    <ns1:ObjectProperty rdf:about="http://www.example.org/ontology#owned">
+        <rdfs:range rdf:resource="http://www.example.org/ontology#Inventory"/>
+        <rdfs:domain rdf:resource="http://www.example.org/ontology#User"/>
+    </ns1:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/ontology#received -->
+
+    <ns1:ObjectProperty rdf:about="http://www.example.org/ontology#received">
+        <rdfs:domain rdf:resource="http://www.example.org/ontology#Message"/>
+        <rdfs:range rdf:resource="http://www.example.org/ontology#User"/>
+    </ns1:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/ontology#reports -->
+
+    <ns1:ObjectProperty rdf:about="http://www.example.org/ontology#reports">
+        <rdfs:range rdf:resource="http://www.example.org/ontology#ReportSys"/>
+        <rdfs:domain rdf:resource="http://www.example.org/ontology#User"/>
+    </ns1:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/ontology#sends -->
+
+    <ns1:ObjectProperty rdf:about="http://www.example.org/ontology#sends">
+        <rdfs:range rdf:resource="http://www.example.org/ontology#Message"/>
+        <rdfs:domain rdf:resource="http://www.example.org/ontology#User"/>
+    </ns1:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/ontology#sent -->
+
+    <ns1:ObjectProperty rdf:about="http://www.example.org/ontology#sent">
+        <rdfs:domain rdf:resource="http://www.example.org/ontology#Message"/>
+        <rdfs:range rdf:resource="http://www.example.org/ontology#User"/>
+    </ns1:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/ontology#signed -->
+
+    <ns1:ObjectProperty rdf:about="http://www.example.org/ontology#signed">
+        <rdfs:domain rdf:resource="http://www.example.org/ontology#Contract"/>
+        <rdfs:range rdf:resource="http://www.example.org/ontology#User"/>
+    </ns1:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/ontology#verifies -->
+
+    <ns1:ObjectProperty rdf:about="http://www.example.org/ontology#verifies">
+        <rdfs:range rdf:resource="http://www.example.org/ontology#User"/>
+    </ns1:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#description -->
+
+    <ns1:DatatypeProperty rdf:about="&ont;description">
+        <rdfs:domain rdf:resource="http://www.example.org/ontology#Offer"/>
+    </ns1:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/ontology#category -->
+
+    <ns1:DatatypeProperty rdf:about="http://www.example.org/ontology#category">
+        <rdfs:domain rdf:resource="http://www.example.org/ontology#Product"/>
+    </ns1:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/ontology#content -->
+
+    <ns1:DatatypeProperty rdf:about="http://www.example.org/ontology#content">
+        <rdfs:domain rdf:resource="http://www.example.org/ontology#Message"/>
+    </ns1:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/ontology#contractID -->
+
+    <ns1:DatatypeProperty rdf:about="http://www.example.org/ontology#contractID">
+        <rdfs:domain rdf:resource="http://www.example.org/ontology#Contract"/>
+    </ns1:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/ontology#email -->
+
+    <ns1:DatatypeProperty rdf:about="http://www.example.org/ontology#email">
+        <rdfs:domain rdf:resource="http://www.example.org/ontology#User"/>
+    </ns1:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/ontology#feedback -->
+
+    <ns1:DatatypeProperty rdf:about="http://www.example.org/ontology#feedback">
+        <rdfs:domain rdf:resource="http://www.example.org/ontology#Review"/>
+    </ns1:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/ontology#forumID -->
+
+    <ns1:DatatypeProperty rdf:about="http://www.example.org/ontology#forumID">
+        <rdfs:domain rdf:resource="http://www.example.org/ontology#Forum"/>
+    </ns1:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/ontology#inventoryID -->
+
+    <ns1:DatatypeProperty rdf:about="http://www.example.org/ontology#inventoryID">
+        <rdfs:domain rdf:resource="http://www.example.org/ontology#Inventory"/>
+    </ns1:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/ontology#location -->
+
+    <ns1:DatatypeProperty rdf:about="http://www.example.org/ontology#location">
+        <rdfs:domain rdf:resource="http://www.example.org/ontology#User"/>
+    </ns1:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/ontology#messageID -->
+
+    <ns1:DatatypeProperty rdf:about="http://www.example.org/ontology#messageID">
+        <rdfs:domain rdf:resource="http://www.example.org/ontology#Message"/>
+    </ns1:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/ontology#name -->
+
+    <ns1:DatatypeProperty rdf:about="http://www.example.org/ontology#name">
+        <rdfs:domain rdf:resource="http://www.example.org/ontology#Product"/>
+    </ns1:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/ontology#offerID -->
+
+    <ns1:DatatypeProperty rdf:about="http://www.example.org/ontology#offerID">
+        <rdfs:domain rdf:resource="http://www.example.org/ontology#Offer"/>
+    </ns1:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/ontology#productID -->
+
+    <ns1:DatatypeProperty rdf:about="http://www.example.org/ontology#productID">
+        <rdfs:domain rdf:resource="http://www.example.org/ontology#Product"/>
+    </ns1:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/ontology#products -->
+
+    <ns1:DatatypeProperty rdf:about="http://www.example.org/ontology#products">
+        <rdfs:domain rdf:resource="http://www.example.org/ontology#Inventory"/>
+        <rdfs:domain rdf:resource="http://www.example.org/ontology#Offer"/>
+    </ns1:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/ontology#questions -->
+
+    <ns1:DatatypeProperty rdf:about="http://www.example.org/ontology#questions">
+        <rdfs:domain rdf:resource="http://www.example.org/ontology#Forum"/>
+    </ns1:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/ontology#rating -->
+
+    <ns1:DatatypeProperty rdf:about="http://www.example.org/ontology#rating">
+        <rdfs:domain rdf:resource="http://www.example.org/ontology#Review"/>
+    </ns1:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/ontology#reportID -->
+
+    <ns1:DatatypeProperty rdf:about="http://www.example.org/ontology#reportID">
+        <rdfs:domain rdf:resource="http://www.example.org/ontology#ReportSys"/>
+    </ns1:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/ontology#requestID -->
+
+    <ns1:DatatypeProperty rdf:about="http://www.example.org/ontology#requestID">
+        <rdfs:domain rdf:resource="http://www.example.org/ontology#Request"/>
+    </ns1:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/ontology#reviewID -->
+
+    <ns1:DatatypeProperty rdf:about="http://www.example.org/ontology#reviewID">
+        <rdfs:domain rdf:resource="http://www.example.org/ontology#Review"/>
+    </ns1:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/ontology#status -->
+
+    <ns1:DatatypeProperty rdf:about="http://www.example.org/ontology#status">
+        <rdfs:domain rdf:resource="http://www.example.org/ontology#Forum"/>
+        <rdfs:domain rdf:resource="http://www.example.org/ontology#Offer"/>
+        <rdfs:domain rdf:resource="http://www.example.org/ontology#Request"/>
+    </ns1:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/ontology#terms -->
+
+    <ns1:DatatypeProperty rdf:about="http://www.example.org/ontology#terms">
+        <rdfs:domain rdf:resource="http://www.example.org/ontology#Contract"/>
+    </ns1:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/ontology#ticketID -->
+
+    <ns1:DatatypeProperty rdf:about="http://www.example.org/ontology#ticketID">
+        <rdfs:domain rdf:resource="http://www.example.org/ontology#Forum"/>
+    </ns1:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/ontology#title -->
+
+    <ns1:DatatypeProperty rdf:about="http://www.example.org/ontology#title">
+        <rdfs:domain rdf:resource="http://www.example.org/ontology#Forum"/>
+    </ns1:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/ontology#type -->
+
+    <ns1:DatatypeProperty rdf:about="http://www.example.org/ontology#type">
+        <rdfs:domain rdf:resource="http://www.example.org/ontology#Forum"/>
+        <rdfs:domain rdf:resource="http://www.example.org/ontology#ReportSys"/>
+    </ns1:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/ontology#userID -->
+
+    <ns1:DatatypeProperty rdf:about="http://www.example.org/ontology#userID">
+        <rdfs:domain rdf:resource="http://www.example.org/ontology#User"/>
+    </ns1:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/ontology#username -->
+
+    <ns1:DatatypeProperty rdf:about="http://www.example.org/ontology#username">
+        <rdfs:domain rdf:resource="http://www.example.org/ontology#User"/>
+    </ns1:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://http://www.example.org/ontology#ServiceRequest -->
+
+    <ns1:Class rdf:about="http://http://www.example.org/ontology#ServiceRequest"/>
+    
+
+
+    <!-- http://www.example.org/ontology#BusinessInventory -->
+
+    <ns1:Class rdf:about="http://www.example.org/ontology#BusinessInventory">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/ontology#Inventory"/>
+    </ns1:Class>
+    
+
+
+    <!-- http://www.example.org/ontology#BusinessUser -->
+
+    <ns1:Class rdf:about="http://www.example.org/ontology#BusinessUser">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/ontology#User"/>
+    </ns1:Class>
+    
+
+
+    <!-- http://www.example.org/ontology#ContentReport -->
+
+    <ns1:Class rdf:about="http://www.example.org/ontology#ContentReport">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/ontology#ReportSys"/>
+    </ns1:Class>
+    
+
+
+    <!-- http://www.example.org/ontology#Contract -->
+
+    <ns1:Class rdf:about="http://www.example.org/ontology#Contract"/>
+    
+
+
+    <!-- http://www.example.org/ontology#DigitalProduct -->
+
+    <ns1:Class rdf:about="http://www.example.org/ontology#DigitalProduct">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/houssem/ontologies/2023/9/untitled-ontology-3#Non_Electronics"/>
+    </ns1:Class>
+    
+
+
+    <!-- http://www.example.org/ontology#Forum -->
+
+    <ns1:Class rdf:about="http://www.example.org/ontology#Forum"/>
+    
+
+
+    <!-- http://www.example.org/ontology#GiveawayOffer -->
+
+    <ns1:Class rdf:about="http://www.example.org/ontology#GiveawayOffer">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/ontology#Offer"/>
+    </ns1:Class>
+    
+
+
+    <!-- http://www.example.org/ontology#IndividualUser -->
+
+    <ns1:Class rdf:about="http://www.example.org/ontology#IndividualUser">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/ontology#User"/>
+    </ns1:Class>
+    
+
+
+    <!-- http://www.example.org/ontology#Inventory -->
+
+    <ns1:Class rdf:about="http://www.example.org/ontology#Inventory"/>
+    
+
+
+    <!-- http://www.example.org/ontology#MediaMessage -->
+
+    <ns1:Class rdf:about="http://www.example.org/ontology#MediaMessage">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/ontology#Message"/>
+    </ns1:Class>
+    
+
+
+    <!-- http://www.example.org/ontology#Message -->
+
+    <ns1:Class rdf:about="http://www.example.org/ontology#Message"/>
+    
+
+
+    <!-- http://www.example.org/ontology#NegativeReview -->
+
+    <ns1:Class rdf:about="http://www.example.org/ontology#NegativeReview">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/ontology#Review"/>
+    </ns1:Class>
+    
+
+
+    <!-- http://www.example.org/ontology#Offer -->
+
+    <ns1:Class rdf:about="http://www.example.org/ontology#Offer"/>
+    
+
+
+    <!-- http://www.example.org/ontology#PersonalInventory -->
+
+    <ns1:Class rdf:about="http://www.example.org/ontology#PersonalInventory">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/ontology#Inventory"/>
+    </ns1:Class>
+    
+
+
+    <!-- http://www.example.org/ontology#PhysicalProduct -->
+
+    <ns1:Class rdf:about="http://www.example.org/ontology#PhysicalProduct">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/houssem/ontologies/2023/9/untitled-ontology-3#Non_Electronics"/>
+    </ns1:Class>
+    
+
+
+    <!-- http://www.example.org/ontology#PositiveReview -->
+
+    <ns1:Class rdf:about="http://www.example.org/ontology#PositiveReview">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/ontology#Review"/>
+    </ns1:Class>
+    
+
+
+    <!-- http://www.example.org/ontology#Product -->
+
+    <ns1:Class rdf:about="http://www.example.org/ontology#Product"/>
+    
+
+
+    <!-- http://www.example.org/ontology#ReportSys -->
+
+    <ns1:Class rdf:about="http://www.example.org/ontology#ReportSys"/>
+    
+
+
+    <!-- http://www.example.org/ontology#Request -->
+
+    <ns1:Class rdf:about="http://www.example.org/ontology#Request"/>
+    
+
+
+    <!-- http://www.example.org/ontology#Review -->
+
+    <ns1:Class rdf:about="http://www.example.org/ontology#Review"/>
+    
+
+
+    <!-- http://www.example.org/ontology#ServiceContract -->
+
+    <ns1:Class rdf:about="http://www.example.org/ontology#ServiceContract">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/ontology#Contract"/>
+    </ns1:Class>
+    
+
+
+    <!-- http://www.example.org/ontology#ServiceRequest -->
+
+    <ns1:Class rdf:about="http://www.example.org/ontology#ServiceRequest">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/ontology#Request"/>
+    </ns1:Class>
+    
+
+
+    <!-- http://www.example.org/ontology#SupportForum -->
+
+    <ns1:Class rdf:about="http://www.example.org/ontology#SupportForum">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/ontology#Forum"/>
+    </ns1:Class>
+    
+
+
+    <!-- http://www.example.org/ontology#SurveyForum -->
+
+    <ns1:Class rdf:about="http://www.example.org/ontology#SurveyForum">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/ontology#Forum"/>
+    </ns1:Class>
+    
+
+
+    <!-- http://www.example.org/ontology#TextMessage -->
+
+    <ns1:Class rdf:about="http://www.example.org/ontology#TextMessage">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/ontology#Message"/>
+    </ns1:Class>
+    
+
+
+    <!-- http://www.example.org/ontology#TradeContract -->
+
+    <ns1:Class rdf:about="http://www.example.org/ontology#TradeContract">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/ontology#Contract"/>
+    </ns1:Class>
+    
+
+
+    <!-- http://www.example.org/ontology#TradeOffer -->
+
+    <ns1:Class rdf:about="http://www.example.org/ontology#TradeOffer">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/ontology#Offer"/>
+    </ns1:Class>
+    
+
+
+    <!-- http://www.example.org/ontology#TradeRequest -->
+
+    <ns1:Class rdf:about="http://www.example.org/ontology#TradeRequest">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/ontology#Request"/>
+    </ns1:Class>
+    
+
+
+    <!-- http://www.example.org/ontology#User -->
+
+    <ns1:Class rdf:about="http://www.example.org/ontology#User"/>
+    
+
+
+    <!-- http://www.example.org/ontology#UserReport -->
+
+    <ns1:Class rdf:about="http://www.example.org/ontology#UserReport">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/ontology#ReportSys"/>
+    </ns1:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/houssem/ontologies/2023/9/untitled-ontology-3#Admin -->
+
+    <ns1:Class rdf:about="http://www.semanticweb.org/houssem/ontologies/2023/9/untitled-ontology-3#Admin">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/ontology#User"/>
+    </ns1:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/houssem/ontologies/2023/9/untitled-ontology-3#Antiques_and_Collectibles -->
+
+    <ns1:Class rdf:about="http://www.semanticweb.org/houssem/ontologies/2023/9/untitled-ontology-3#Antiques_and_Collectibles">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/ontology#PhysicalProduct"/>
+    </ns1:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/houssem/ontologies/2023/9/untitled-ontology-3#Books -->
+
+    <ns1:Class rdf:about="http://www.semanticweb.org/houssem/ontologies/2023/9/untitled-ontology-3#Books">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/ontology#PhysicalProduct"/>
+    </ns1:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/houssem/ontologies/2023/9/untitled-ontology-3#Clothing -->
+
+    <ns1:Class rdf:about="http://www.semanticweb.org/houssem/ontologies/2023/9/untitled-ontology-3#Clothing">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/ontology#PhysicalProduct"/>
+    </ns1:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/houssem/ontologies/2023/9/untitled-ontology-3#Electronics -->
+
+    <ns1:Class rdf:about="http://www.semanticweb.org/houssem/ontologies/2023/9/untitled-ontology-3#Electronics">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/ontology#Product"/>
+    </ns1:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/houssem/ontologies/2023/9/untitled-ontology-3#Gaming_Accessories -->
+
+    <ns1:Class rdf:about="http://www.semanticweb.org/houssem/ontologies/2023/9/untitled-ontology-3#Gaming_Accessories">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/houssem/ontologies/2023/9/untitled-ontology-3#Electronics"/>
+    </ns1:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/houssem/ontologies/2023/9/untitled-ontology-3#Health_and_Fitness_Electronics -->
+
+    <ns1:Class rdf:about="http://www.semanticweb.org/houssem/ontologies/2023/9/untitled-ontology-3#Health_and_Fitness_Electronics">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/houssem/ontologies/2023/9/untitled-ontology-3#Electronics"/>
+    </ns1:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/houssem/ontologies/2023/9/untitled-ontology-3#Home_Decor -->
+
+    <ns1:Class rdf:about="http://www.semanticweb.org/houssem/ontologies/2023/9/untitled-ontology-3#Home_Decor">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/ontology#PhysicalProduct"/>
+    </ns1:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/houssem/ontologies/2023/9/untitled-ontology-3#Home_Entertainment -->
+
+    <ns1:Class rdf:about="http://www.semanticweb.org/houssem/ontologies/2023/9/untitled-ontology-3#Home_Entertainment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/houssem/ontologies/2023/9/untitled-ontology-3#Electronics"/>
+    </ns1:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/houssem/ontologies/2023/9/untitled-ontology-3#Kitchenware -->
+
+    <ns1:Class rdf:about="http://www.semanticweb.org/houssem/ontologies/2023/9/untitled-ontology-3#Kitchenware">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/ontology#PhysicalProduct"/>
+    </ns1:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/houssem/ontologies/2023/9/untitled-ontology-3#Non_Electronics -->
+
+    <ns1:Class rdf:about="http://www.semanticweb.org/houssem/ontologies/2023/9/untitled-ontology-3#Non_Electronics">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/ontology#Product"/>
+    </ns1:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/houssem/ontologies/2023/9/untitled-ontology-3#Outdoor_and_Camping_Gear -->
+
+    <ns1:Class rdf:about="http://www.semanticweb.org/houssem/ontologies/2023/9/untitled-ontology-3#Outdoor_and_Camping_Gear">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/ontology#PhysicalProduct"/>
+    </ns1:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/houssem/ontologies/2023/9/untitled-ontology-3#Security_and_Surveillance -->
+
+    <ns1:Class rdf:about="http://www.semanticweb.org/houssem/ontologies/2023/9/untitled-ontology-3#Security_and_Surveillance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/houssem/ontologies/2023/9/untitled-ontology-3#Electronics"/>
+    </ns1:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/houssem/ontologies/2023/9/untitled-ontology-3#Smartphones -->
+
+    <ns1:Class rdf:about="http://www.semanticweb.org/houssem/ontologies/2023/9/untitled-ontology-3#Smartphones">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/houssem/ontologies/2023/9/untitled-ontology-3#Electronics"/>
+    </ns1:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/houssem/ontologies/2023/9/untitled-ontology-3#Sports_Equipment -->
+
+    <ns1:Class rdf:about="http://www.semanticweb.org/houssem/ontologies/2023/9/untitled-ontology-3#Sports_Equipment">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/ontology#PhysicalProduct"/>
+    </ns1:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/houssem/ontologies/2023/9/untitled-ontology-3#Tools_and_DIY -->
+
+    <ns1:Class rdf:about="http://www.semanticweb.org/houssem/ontologies/2023/9/untitled-ontology-3#Tools_and_DIY">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/ontology#PhysicalProduct"/>
+    </ns1:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/houssem/ontologies/2023/9/untitled-ontology-3#Toys_and_Games -->
+
+    <ns1:Class rdf:about="http://www.semanticweb.org/houssem/ontologies/2023/9/untitled-ontology-3#Toys_and_Games">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/ontology#PhysicalProduct"/>
+    </ns1:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/houssem/ontologies/2023/9/untitled-ontology-3#guest -->
+
+    <ns1:Class rdf:about="http://www.semanticweb.org/houssem/ontologies/2023/9/untitled-ontology-3#guest">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/ontology#User"/>
+    </ns1:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/houssem/ontologies/2023/9/untitled-ontology-3#household_appliances -->
+
+    <ns1:Class rdf:about="http://www.semanticweb.org/houssem/ontologies/2023/9/untitled-ontology-3#household_appliances">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/houssem/ontologies/2023/9/untitled-ontology-3#Electronics"/>
+    </ns1:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.example.org/ontology#Contract_User1 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Contract_User1">
+        <rdf:type rdf:resource="http://www.example.org/ontology#TradeContract"/>
+        <signed rdf:resource="http://www.example.org/ontology#User1"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#Contract_User10 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Contract_User10">
+        <rdf:type rdf:resource="http://www.example.org/ontology#ServiceContract"/>
+        <signed rdf:resource="http://www.example.org/ontology#User10"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#Contract_User2 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Contract_User2">
+        <rdf:type rdf:resource="http://www.example.org/ontology#ServiceContract"/>
+        <signed rdf:resource="http://www.example.org/ontology#User2"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#Contract_User3 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Contract_User3">
+        <rdf:type rdf:resource="http://www.example.org/ontology#TradeContract"/>
+        <signed rdf:resource="http://www.example.org/ontology#User3"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#Contract_User4 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Contract_User4">
+        <rdf:type rdf:resource="http://www.example.org/ontology#TradeContract"/>
+        <signed rdf:resource="http://www.example.org/ontology#User4"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#Contract_User5 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Contract_User5">
+        <rdf:type rdf:resource="http://www.example.org/ontology#ServiceContract"/>
+        <signed rdf:resource="http://www.example.org/ontology#User5"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#Contract_User6 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Contract_User6">
+        <rdf:type rdf:resource="http://www.example.org/ontology#TradeContract"/>
+        <signed rdf:resource="http://www.example.org/ontology#User6"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#Contract_User7 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Contract_User7">
+        <rdf:type rdf:resource="http://www.example.org/ontology#ServiceContract"/>
+        <signed rdf:resource="http://www.example.org/ontology#User7"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#Contract_User8 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Contract_User8">
+        <rdf:type rdf:resource="http://www.example.org/ontology#ServiceContract"/>
+        <signed rdf:resource="http://www.example.org/ontology#User8"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#Contract_User9 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Contract_User9">
+        <rdf:type rdf:resource="http://www.example.org/ontology#TradeContract"/>
+        <signed rdf:resource="http://www.example.org/ontology#User9"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#Forum_User1 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Forum_User1">
+        <rdf:type rdf:resource="http://www.example.org/ontology#SupportForum"/>
+        <belongs rdf:resource="http://www.example.org/ontology#User1"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#Forum_User10 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Forum_User10">
+        <rdf:type rdf:resource="http://www.example.org/ontology#SupportForum"/>
+        <belongs rdf:resource="http://www.example.org/ontology#User10"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#Forum_User2 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Forum_User2">
+        <rdf:type rdf:resource="http://www.example.org/ontology#SurveyForum"/>
+        <belongs rdf:resource="http://www.example.org/ontology#User2"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#Forum_User3 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Forum_User3">
+        <rdf:type rdf:resource="http://www.example.org/ontology#SupportForum"/>
+        <belongs rdf:resource="http://www.example.org/ontology#User3"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#Forum_User4 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Forum_User4">
+        <rdf:type rdf:resource="http://www.example.org/ontology#SurveyForum"/>
+        <belongs rdf:resource="http://www.example.org/ontology#User4"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#Forum_User5 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Forum_User5">
+        <rdf:type rdf:resource="http://www.example.org/ontology#SurveyForum"/>
+        <belongs rdf:resource="http://www.example.org/ontology#User5"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#Forum_User6 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Forum_User6">
+        <rdf:type rdf:resource="http://www.example.org/ontology#SurveyForum"/>
+        <belongs rdf:resource="http://www.example.org/ontology#User6"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#Forum_User7 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Forum_User7">
+        <rdf:type rdf:resource="http://www.example.org/ontology#SurveyForum"/>
+        <belongs rdf:resource="http://www.example.org/ontology#User7"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#Forum_User8 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Forum_User8">
+        <rdf:type rdf:resource="http://www.example.org/ontology#SupportForum"/>
+        <belongs rdf:resource="http://www.example.org/ontology#User8"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#Forum_User9 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Forum_User9">
+        <rdf:type rdf:resource="http://www.example.org/ontology#SurveyForum"/>
+        <belongs rdf:resource="http://www.example.org/ontology#User9"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#Inventory_User1 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Inventory_User1">
+        <rdf:type rdf:resource="http://www.example.org/ontology#BusinessInventory"/>
+        <contains rdf:resource="http://www.example.org/ontology#Product_User1"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#Inventory_User10 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Inventory_User10">
+        <rdf:type rdf:resource="http://www.example.org/ontology#PersonalInventory"/>
+        <contains rdf:resource="http://www.example.org/ontology#Product_User10"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#Inventory_User2 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Inventory_User2">
+        <rdf:type rdf:resource="http://www.example.org/ontology#BusinessInventory"/>
+        <contains rdf:resource="http://www.example.org/ontology#Product_User2"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#Inventory_User3 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Inventory_User3">
+        <rdf:type rdf:resource="http://www.example.org/ontology#BusinessInventory"/>
+        <contains rdf:resource="http://www.example.org/ontology#Product_User3"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#Inventory_User4 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Inventory_User4">
+        <rdf:type rdf:resource="http://www.example.org/ontology#PersonalInventory"/>
+        <contains rdf:resource="http://www.example.org/ontology#Product_User4"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#Inventory_User5 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Inventory_User5">
+        <rdf:type rdf:resource="http://www.example.org/ontology#PersonalInventory"/>
+        <contains rdf:resource="http://www.example.org/ontology#Product_User5"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#Inventory_User6 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Inventory_User6">
+        <rdf:type rdf:resource="http://www.example.org/ontology#PersonalInventory"/>
+        <contains rdf:resource="http://www.example.org/ontology#Product_User6"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#Inventory_User7 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Inventory_User7">
+        <rdf:type rdf:resource="http://www.example.org/ontology#PersonalInventory"/>
+        <contains rdf:resource="http://www.example.org/ontology#Product_User7"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#Inventory_User8 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Inventory_User8">
+        <rdf:type rdf:resource="http://www.example.org/ontology#BusinessInventory"/>
+        <contains rdf:resource="http://www.example.org/ontology#Product_User8"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#Inventory_User9 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Inventory_User9">
+        <rdf:type rdf:resource="http://www.example.org/ontology#BusinessInventory"/>
+        <contains rdf:resource="http://www.example.org/ontology#Product_User9"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#Message_User1 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Message_User1">
+        <rdf:type rdf:resource="http://www.example.org/ontology#TextMessage"/>
+        <sent rdf:resource="http://www.example.org/ontology#User1"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#Message_User10 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Message_User10">
+        <rdf:type rdf:resource="http://www.example.org/ontology#TextMessage"/>
+        <sent rdf:resource="http://www.example.org/ontology#User10"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#Message_User2 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Message_User2">
+        <rdf:type rdf:resource="http://www.example.org/ontology#MediaMessage"/>
+        <sent rdf:resource="http://www.example.org/ontology#User2"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#Message_User3 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Message_User3">
+        <rdf:type rdf:resource="http://www.example.org/ontology#MediaMessage"/>
+        <sent rdf:resource="http://www.example.org/ontology#User3"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#Message_User4 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Message_User4">
+        <rdf:type rdf:resource="http://www.example.org/ontology#MediaMessage"/>
+        <sent rdf:resource="http://www.example.org/ontology#User4"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#Message_User5 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Message_User5">
+        <rdf:type rdf:resource="http://www.example.org/ontology#TextMessage"/>
+        <sent rdf:resource="http://www.example.org/ontology#User5"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#Message_User6 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Message_User6">
+        <rdf:type rdf:resource="http://www.example.org/ontology#TextMessage"/>
+        <sent rdf:resource="http://www.example.org/ontology#User6"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#Message_User7 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Message_User7">
+        <rdf:type rdf:resource="http://www.example.org/ontology#TextMessage"/>
+        <sent rdf:resource="http://www.example.org/ontology#User7"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#Message_User8 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Message_User8">
+        <rdf:type rdf:resource="http://www.example.org/ontology#TextMessage"/>
+        <sent rdf:resource="http://www.example.org/ontology#User8"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#Message_User9 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Message_User9">
+        <rdf:type rdf:resource="http://www.example.org/ontology#TextMessage"/>
+        <sent rdf:resource="http://www.example.org/ontology#User9"/>
+    </ns1:NamedIndividual>
+    
+
+
+  <!-- http://www.example.org/ontology#Offer_User1 -->
+<ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Offer_User1">
+    <rdf:type rdf:resource="http://www.example.org/ontology#ServiceOffer"/>
+    <involves rdf:resource="http://www.example.org/ontology#Product_User1"/>
+    <offerID>1001</offerID>
+    <ont:description>Quality service offer</ont:description>
+    <status>Active</status>
+</ns1:NamedIndividual>
+
+<!-- http://www.example.org/ontology#Offer_User10 -->
+<ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Offer_User10">
+    <rdf:type rdf:resource="http://www.example.org/ontology#ProductOffer"/>
+    <involves rdf:resource="http://www.example.org/ontology#Product_User10"/>
+    <offerID>1010</offerID>
+    <ont:description>Great product deal</ont:description>
+    <status>Inactive</status>
+</ns1:NamedIndividual>
+
+<!-- http://www.example.org.ontology#Offer_User2 -->
+<ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Offer_User2">
+    <rdf:type rdf:resource="http://www.example.org/ontology#ProductOffer"/>
+    <involves rdf:resource="http://www.example.org/ontology#Product_User2"/>
+    <offerID>1002</offerID>
+    <ont:description>Amazing product sale</ont:description>
+    <status>Active</status>
+</ns1:NamedIndividual>
+
+<!-- http://www.example.org/ontology#Offer_User3 -->
+<ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Offer_User3">
+    <rdf:type rdf:resource="http://www.example.org/ontology#ServiceOffer"/>
+    <involves rdf:resource="http://www.example.org/ontology#Product_User3"/>
+    <offerID>1003</offerID>
+    <ont:description>Quick service offer</ont:description>
+    <status>Inactive</status>
+</ns1:NamedIndividual>
+
+<!-- http://www.example.org/ontology#Offer_User4 -->
+<ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Offer_User4">
+    <rdf:type rdf:resource="http://www.example.org.ontology#ProductOffer"/>
+    <involves rdf:resource="http://www.example.org/ontology#Product_User4"/>
+    <offerID>1004</offerID>
+    <ont:description>Special product deal</ont:description>
+    <status>Active</status>
+</ns1:NamedIndividual>
+
+<!-- http://www.example.org/ontology#Offer_User5 -->
+<ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Offer_User5">
+    <rdf:type rdf:resource="http://www.example.org/ontology#ServiceOffer"/>
+    <involves rdf:resource="http://www.example.org/ontology#Product_User5"/>
+    <offerID>1005</offerID>
+    <ont:description>Fast service offer</ont:description>
+    <status>Inactive</status>
+</ns1:NamedIndividual>
+
+<!-- http://www.example.org/ontology#Offer_User6 -->
+<ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Offer_User6">
+    <rdf:type rdf:resource="http://www.example.org/ontology#ProductOffer"/>
+    <involves rdf:resource="http://www.example.org/ontology#Product_User6"/>
+    <offerID>1006</offerID>
+    <ont:description>Exclusive product sale</ont:description>
+    <status>Active</status>
+</ns1:NamedIndividual>
+
+<!-- http://www.example.org/ontology#Offer_User7 -->
+<ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Offer_User7">
+    <rdf:type rdf:resource="http://www.example.org/ontology#ProductOffer"/>
+    <involves rdf:resource="http://www.example.org/ontology#Product_User7"/>
+    <offerID>1007</offerID>
+    <ont:description>Limited product deal</ont:description>
+    <status>Inactive</status>
+</ns1:NamedIndividual>
+
+<!-- http://www.example.org/ontology#Offer_User8 -->
+<ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Offer_User8">
+    <rdf:type rdf:resource="http://www.example.org/ontology#ServiceOffer"/>
+    <involves rdf:resource="http://www.example.org/ontology#Product_User8"/>
+    <offerID>1008</offerID>
+    <ont:description>Reliable service offer</ont:description>
+    <status>Active</status>
+</ns1:NamedIndividual>
+
+<!-- http://www.example.org/ontology#Offer_User9 -->
+<ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Offer_User9">
+    <rdf:type rdf:resource="http://www.example.org/ontology#ProductOffer"/>
+    <involves rdf:resource="http://www.example.org/ontology#Product_User9"/>
+    <offerID>1009</offerID>
+    <ont:description>Great value product sale</ont:description>
+    <status>Inactive</status>
+</ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#Product_User1 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Product_User1">
+        <rdf:type rdf:resource="http://www.example.org/ontology#PhysicalProduct"/>
+        <belongs rdf:resource="http://www.example.org/ontology#User1"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#Product_User10 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Product_User10">
+        <rdf:type rdf:resource="http://www.example.org/ontology#PhysicalProduct"/>
+        <belongs rdf:resource="http://www.example.org/ontology#User10"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#Product_User2 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Product_User2">
+        <rdf:type rdf:resource="http://www.example.org/ontology#PhysicalProduct"/>
+        <belongs rdf:resource="http://www.example.org/ontology#User2"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#Product_User3 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Product_User3">
+        <rdf:type rdf:resource="http://www.example.org/ontology#DigitalProduct"/>
+        <belongs rdf:resource="http://www.example.org/ontology#User3"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#Product_User4 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Product_User4">
+        <rdf:type rdf:resource="http://www.example.org/ontology#DigitalProduct"/>
+        <belongs rdf:resource="http://www.example.org/ontology#User4"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#Product_User5 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Product_User5">
+        <rdf:type rdf:resource="http://www.example.org/ontology#PhysicalProduct"/>
+        <belongs rdf:resource="http://www.example.org/ontology#User5"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#Product_User6 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Product_User6">
+        <rdf:type rdf:resource="http://www.example.org/ontology#PhysicalProduct"/>
+        <belongs rdf:resource="http://www.example.org/ontology#User6"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#Product_User7 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Product_User7">
+        <rdf:type rdf:resource="http://www.example.org/ontology#PhysicalProduct"/>
+        <belongs rdf:resource="http://www.example.org/ontology#User7"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#Product_User8 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Product_User8">
+        <rdf:type rdf:resource="http://www.example.org/ontology#DigitalProduct"/>
+        <belongs rdf:resource="http://www.example.org/ontology#User8"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#Product_User9 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Product_User9">
+        <rdf:type rdf:resource="http://www.example.org/ontology#PhysicalProduct"/>
+        <belongs rdf:resource="http://www.example.org/ontology#User9"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#ReportSys_User1 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#ReportSys_User1">
+        <rdf:type rdf:resource="http://www.example.org/ontology#ContentReport"/>
+        <collects rdf:resource="http://www.example.org/ontology#User1"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#ReportSys_User10 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#ReportSys_User10">
+        <rdf:type rdf:resource="http://www.example.org/ontology#ContentReport"/>
+        <collects rdf:resource="http://www.example.org/ontology#User10"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#ReportSys_User11 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#ReportSys_User11">
+        <rdf:type rdf:resource="http://www.example.org/ontology#UserReport"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#ReportSys_User2 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#ReportSys_User2">
+        <rdf:type rdf:resource="http://www.example.org/ontology#ContentReport"/>
+        <collects rdf:resource="http://www.example.org/ontology#User2"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#ReportSys_User3 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#ReportSys_User3">
+        <rdf:type rdf:resource="http://www.example.org/ontology#UserReport"/>
+        <collects rdf:resource="http://www.example.org/ontology#User3"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#ReportSys_User4 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#ReportSys_User4">
+        <rdf:type rdf:resource="http://www.example.org/ontology#UserReport"/>
+        <collects rdf:resource="http://www.example.org/ontology#User4"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#ReportSys_User5 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#ReportSys_User5">
+        <rdf:type rdf:resource="http://www.example.org/ontology#ContentReport"/>
+        <collects rdf:resource="http://www.example.org/ontology#User5"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#ReportSys_User6 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#ReportSys_User6">
+        <rdf:type rdf:resource="http://www.example.org/ontology#ContentReport"/>
+        <collects rdf:resource="http://www.example.org/ontology#User6"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#ReportSys_User7 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#ReportSys_User7">
+        <rdf:type rdf:resource="http://www.example.org/ontology#UserReport"/>
+        <collects rdf:resource="http://www.example.org/ontology#User7"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#ReportSys_User8 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#ReportSys_User8">
+        <rdf:type rdf:resource="http://www.example.org/ontology#ContentReport"/>
+        <collects rdf:resource="http://www.example.org/ontology#User8"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#ReportSys_User9 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#ReportSys_User9">
+        <rdf:type rdf:resource="http://www.example.org/ontology#UserReport"/>
+        <collects rdf:resource="http://www.example.org/ontology#User9"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#Request_User1 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Request_User1">
+        <rdf:type rdf:resource="http://www.example.org/ontology#TradeRequest"/>
+        <status>Open</status>
+        <requestID>001</requestID>
+        <involves rdf:resource="http://www.example.org/ontology#User1"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#Request_User10 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Request_User10">
+        <rdf:type rdf:resource="http://www.example.org/ontology#TradeRequest"/>
+        <status>Closed</status>
+        <requestID>002</requestID>
+        <involves rdf:resource="http://www.example.org/ontology#User10"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#Request_User2 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Request_User2">
+        <rdf:type rdf:resource="http://www.example.org/ontology#TradeRequest"/>
+        <requestID>003</requestID>
+        <status>Open</status>
+        <involves rdf:resource="http://www.example.org/ontology#User2"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#Request_User3 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Request_User3">
+        <rdf:type rdf:resource="http://www.example.org/ontology#ServiceRequest"/>
+        <requestID>004</requestID>
+        <status>Closed</status>
+        <involves rdf:resource="http://www.example.org/ontology#User3"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#Request_User4 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Request_User4">
+        <rdf:type rdf:resource="http://http://www.example.org/ontology#ServiceRequest"/>
+        <requestID>005</requestID>
+        <status>Open</status>
+        <involves rdf:resource="http://www.example.org/ontology#User4"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#Request_User5 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Request_User5">
+        <rdf:type rdf:resource="http://www.example.org/ontology#TradeRequest"/>
+        <requestID>006</requestID>
+        <status>Closed</status>
+        <involves rdf:resource="http://www.example.org/ontology#User5"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#Request_User6 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Request_User6">
+        <rdf:type rdf:resource="http://www.example.org/ontology#TradeRequest"/>
+        <status>Open</status>
+        <requestID>007</requestID>
+        <involves rdf:resource="http://www.example.org/ontology#User6"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#Request_User7 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Request_User7">
+        <rdf:type rdf:resource="http://www.example.org/ontology#TradeRequest"/>
+        <requestID>008</requestID>
+        <status>Closed</status>
+        <involves rdf:resource="http://www.example.org/ontology#User7"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#Request_User8 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Request_User8">
+        <rdf:type rdf:resource="http://www.example.org/ontology#TradeRequest"/>
+        <requestID>009</requestID>
+        <status>Open</status>
+        <involves rdf:resource="http://www.example.org/ontology#User8"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#Request_User9 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Request_User9">
+        <rdf:type rdf:resource="http://www.example.org/ontology#ServiceRequest"/>
+        <requestID>010</requestID>
+        <status>Closed</status>
+        <involves rdf:resource="http://www.example.org/ontology#User9"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#Review_User10 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Review_User10">
+        <rdf:type rdf:resource="http://www.example.org/ontology#NegativeReview"/>
+        <reviewID>123</reviewID>
+        <feedback>Terrible service, never again!</feedback>
+        <rating>2</rating>
+        <belongs rdf:resource="http://www.example.org/ontology#User10"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#Review_User2 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Review_User2">
+        <rdf:type rdf:resource="http://www.example.org/ontology#NegativeReview"/>
+        <reviewID>456</reviewID>
+        <feedback>Poor quality product, waste of money.</feedback>
+        <rating>1</rating>
+        <belongs rdf:resource="http://www.example.org/ontology#User2"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#Review_User3 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Review_User3">
+        <rdf:type rdf:resource="http://www.example.org/ontology#PositiveReview"/>
+        <feedback>Excellent service, highly recommended!</feedback>
+        <rating>5</rating>
+        <reviewID>789</reviewID>
+        <belongs rdf:resource="http://www.example.org/ontology#User3"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#Review_User4 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Review_User4">
+        <rdf:type rdf:resource="http://www.example.org/ontology#PositiveReview"/>
+        <reviewID>1011</reviewID>
+        <rating>4</rating>
+        <feedback>Great experience, will buy again!</feedback>
+        <belongs rdf:resource="http://www.example.org/ontology#User4"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#Review_User5 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Review_User5">
+        <rdf:type rdf:resource="http://www.example.org/ontology#PositiveReview"/>
+        <reviewID>1213</reviewID>
+        <feedback>Fast shipping, good product!</feedback>
+        <rating>4</rating>
+        <belongs rdf:resource="http://www.example.org/ontology#User5"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#Review_User6 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Review_User6">
+        <rdf:type rdf:resource="http://www.example.org/ontology#PositiveReview"/>
+        <rating>5</rating>
+        <feedback>Impressive service, no complaints!</feedback>
+        <reviewID>1415</reviewID>
+        <belongs rdf:resource="http://www.example.org/ontology#User6"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#Review_User7 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Review_User7">
+        <rdf:type rdf:resource="http://www.example.org/ontology#NegativeReview"/>
+        <feedback>Horrible experience, worst ever.</feedback>
+        <rating>1</rating>
+        <reviewID>1617</reviewID>
+        <belongs rdf:resource="http://www.example.org/ontology#User7"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#Review_User8 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Review_User8">
+        <rdf:type rdf:resource="http://www.example.org/ontology#PositiveReview"/>
+        <reviewID>1819</reviewID>
+        <rating>4</rating>
+        <feedback>Good quality, satisfied customer.</feedback>
+        <belongs rdf:resource="http://www.example.org/ontology#User8"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#Review_User9 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#Review_User9">
+        <rdf:type rdf:resource="http://www.example.org/ontology#NegativeReview"/>
+        <reviewID>2021</reviewID>
+        <feedback>Disappointing, terrible service.</feedback>
+        <rating>2</rating>
+        <belongs rdf:resource="http://www.example.org/ontology#User9"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#User1 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#User1">
+        <rdf:type rdf:resource="http://www.example.org/ontology#IndividualUser"/>
+        <location>Beja</location>
+        <username>houssem_balti</username>
+        <userID>1</userID>
+        <email>houssem.balti@esprit.tn</email>
+        <contractID>houssem balti</contractID>
+        <creates rdf:resource="http://www.example.org/ontology#Forum_User1"/>
+        <sends rdf:resource="http://www.example.org/ontology#Message_User1"/>
+        <initiates rdf:resource="http://www.example.org/ontology#Request_User1"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#User10 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#User10">
+        <rdf:type rdf:resource="http://www.example.org/ontology#IndividualUser"/>
+        <name>mohamed wael</name>
+        <userID>10</userID>
+        <username>mohamed_wael</username>
+        <email>mohamed.wael@gmail.com</email>
+        <location>Gafsa</location>
+        <creates rdf:resource="http://www.example.org/ontology#Forum_User10"/>
+        <sends rdf:resource="http://www.example.org/ontology#Message_User10"/>
+        <initiates rdf:resource="http://www.example.org/ontology#Request_User10"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#User2 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#User2">
+        <rdf:type rdf:resource="http://www.example.org/ontology#BusinessUser"/>
+        <location>Tunis</location>
+        <username>mouhib_saleh</username>
+        <email>mouhib.saleh@esprit.tn</email>
+        <userID>2</userID>
+        <name>mouhib saleh</name>
+        <creates rdf:resource="http://www.example.org/ontology#Forum_User2"/>
+        <sends rdf:resource="http://www.example.org/ontology#Message_User2"/>
+        <initiates rdf:resource="http://www.example.org/ontology#Request_User2"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#User3 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#User3">
+        <rdf:type rdf:resource="http://www.example.org/ontology#IndividualUser"/>
+        <email>chehine.dhemaied@esprit.tn</email>
+        <name>chehine dhemaied</name>
+        <username>chehine_dhemaied</username>
+        <userID>3</userID>
+        <location>Mounastir</location>
+        <creates rdf:resource="http://www.example.org/ontology#Forum_User3"/>
+        <sends rdf:resource="http://www.example.org/ontology#Message_User3"/>
+        <initiates rdf:resource="http://www.example.org/ontology#Request_User3"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#User4 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#User4">
+        <rdf:type rdf:resource="http://www.example.org/ontology#BusinessUser"/>
+        <username>malek zlitni</username>
+        <location>Jerba</location>
+        <email>malek.zliitni@esprit.tn</email>
+        <userID>4</userID>
+        <name>malek zlitni</name>
+        <creates rdf:resource="http://www.example.org/ontology#Forum_User4"/>
+        <sends rdf:resource="http://www.example.org/ontology#Message_User4"/>
+        <initiates rdf:resource="http://www.example.org/ontology#Request_User4"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#User5 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#User5">
+        <rdf:type rdf:resource="http://www.example.org/ontology#BusinessUser"/>
+        <username>aziz_ouertani</username>
+        <name>mohamed aziz ouertani</name>
+        <location>Gabes</location>
+        <email>mohamedaziz.ouertani@esprit.tn</email>
+        <userID>5</userID>
+        <creates rdf:resource="http://www.example.org/ontology#Forum_User5"/>
+        <sends rdf:resource="http://www.example.org/ontology#Message_User5"/>
+        <initiates rdf:resource="http://www.example.org/ontology#Request_User5"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#User6 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#User6">
+        <rdf:type rdf:resource="http://www.example.org/ontology#BusinessUser"/>
+        <name>mejdi ala</name>
+        <userID>6</userID>
+        <username>mejdi_ala</username>
+        <email>mejdi.ala@gmail.com</email>
+        <location>Kaserine</location>
+        <creates rdf:resource="http://www.example.org/ontology#Forum_User6"/>
+        <sends rdf:resource="http://www.example.org/ontology#Message_User6"/>
+        <initiates rdf:resource="http://www.example.org/ontology#Request_User6"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#User7 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#User7">
+        <rdf:type rdf:resource="http://www.example.org/ontology#IndividualUser"/>
+        <username>malek_abbes</username>
+        <name>malek abbes</name>
+        <email>malek.abbess@esprit.tn</email>
+        <userID>7</userID>
+        <location>Tataouine</location>
+        <creates rdf:resource="http://www.example.org/ontology#Forum_User7"/>
+        <sends rdf:resource="http://www.example.org/ontology#Message_User7"/>
+        <initiates rdf:resource="http://www.example.org/ontology#Request_User7"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#User8 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#User8">
+        <rdf:type rdf:resource="http://www.example.org/ontology#IndividualUser"/>
+        <email>mohamed.azouz@gmail.com</email>
+        <userID>8</userID>
+        <name>mohamed azouz</name>
+        <username>mohamed_azouz</username>
+        <location>Bizerte</location>
+        <creates rdf:resource="http://www.example.org/ontology#Forum_User8"/>
+        <sends rdf:resource="http://www.example.org/ontology#Message_User8"/>
+        <initiates rdf:resource="http://www.example.org/ontology#Request_User8"/>
+    </ns1:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/ontology#User9 -->
+
+    <ns1:NamedIndividual rdf:about="http://www.example.org/ontology#User9">
+        <rdf:type rdf:resource="http://www.example.org/ontology#BusinessUser"/>
+        <email>ali.zitouni@gmail.com</email>
+        <userID>9</userID>
+        <username>ali_zitouni</username>
+        <location>Tataouine</location>
+        <name>ali zitouni</name>
+        <creates rdf:resource="http://www.example.org/ontology#Forum_User9"/>
+        <sends rdf:resource="http://www.example.org/ontology#Message_User9"/>
+        <initiates rdf:resource="http://www.example.org/ontology#Request_User9"/>
+    </ns1:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
