@@ -50,10 +50,11 @@ public class Contract {
         JSONArray res = j.getJSONObject("results").getJSONArray("bindings");
 
         return res.toString();
+
     }
 
 
-    @GetMapping("/list")
+    @GetMapping("/AllContracts")
     public String getContracts() {
         String qexec = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n" +
                 " PREFIX owl: <http://www.w3.org/2002/07/owl#>\n" +
