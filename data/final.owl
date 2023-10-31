@@ -357,6 +357,7 @@
     
 
 
+
     <!-- http://www.example.org/ontology#questions -->
 
     <owl:DatatypeProperty rdf:about="http://www.example.org/ontology#questions">
@@ -986,6 +987,7 @@
     <!-- http://www.example.org/ontology#Contract_User1 -->
 
     <owl:NamedIndividual rdf:about="http://www.example.org/ontology#Contract_User1">
+        <rdf:type rdf:resource="http://www.example.org/ontology#Contract"/>
         <rdf:type rdf:resource="http://www.example.org/ontology#TradeContract"/>
         <contractID>1001</contractID>
         <type>oneway</type>
@@ -998,6 +1000,7 @@
     <!-- http://www.example.org/ontology#Contract_User10 -->
 
     <owl:NamedIndividual rdf:about="http://www.example.org/ontology#Contract_User10">
+        <rdf:type rdf:resource="http://www.example.org/ontology#Contract"/>
         <rdf:type rdf:resource="&ont;OneWayContract"/>
         <contractID>1001</contractID>
         <type>oneway</type>
@@ -1010,6 +1013,7 @@
     <!-- http://www.example.org/ontology#Contract_User2 -->
 
     <owl:NamedIndividual rdf:about="http://www.example.org/ontology#Contract_User2">
+        <rdf:type rdf:resource="http://www.example.org/ontology#Contract"/>
         <rdf:type rdf:resource="&ont;OneWayContract"/>
         <contractID>1001</contractID>
         <terms>Home meeting</terms>
@@ -1022,6 +1026,7 @@
     <!-- http://www.example.org/ontology#Contract_User3 -->
 
     <owl:NamedIndividual rdf:about="http://www.example.org/ontology#Contract_User3">
+        <rdf:type rdf:resource="http://www.example.org/ontology#Contract"/>
         <rdf:type rdf:resource="http://www.example.org/ontology#TradeContract"/>
         <contractID>1001</contractID>
         <type>oneway</type>
@@ -1034,6 +1039,7 @@
     <!-- http://www.example.org/ontology#Contract_User4 -->
 
     <owl:NamedIndividual rdf:about="http://www.example.org/ontology#Contract_User4">
+        <rdf:type rdf:resource="http://www.example.org/ontology#Contract"/>
         <rdf:type rdf:resource="http://www.example.org/ontology#TradeContract"/>
         <terms>Home meeting</terms>
         <type>oneway</type>
@@ -1046,6 +1052,7 @@
     <!-- http://www.example.org/ontology#Contract_User5 -->
 
     <owl:NamedIndividual rdf:about="http://www.example.org/ontology#Contract_User5">
+        <rdf:type rdf:resource="http://www.example.org/ontology#Contract"/>
         <rdf:type rdf:resource="&ont;OneWayContract"/>
         <contractID>1001</contractID>
         <type>oneway</type>
@@ -1058,6 +1065,7 @@
     <!-- http://www.example.org/ontology#Contract_User6 -->
 
     <owl:NamedIndividual rdf:about="http://www.example.org/ontology#Contract_User6">
+        <rdf:type rdf:resource="http://www.example.org/ontology#Contract"/>
         <rdf:type rdf:resource="http://www.example.org/ontology#TradeContract"/>
         <terms>Home meeting</terms>
         <type>oneway</type>
@@ -1070,6 +1078,7 @@
     <!-- http://www.example.org/ontology#Contract_User7 -->
 
     <owl:NamedIndividual rdf:about="http://www.example.org/ontology#Contract_User7">
+        <rdf:type rdf:resource="http://www.example.org/ontology#Contract"/>
         <rdf:type rdf:resource="&ont;OneWayContract"/>
         <contractID>1001</contractID>
         <terms>Home meeting</terms>
@@ -1082,6 +1091,7 @@
     <!-- http://www.example.org/ontology#Contract_User8 -->
 
     <owl:NamedIndividual rdf:about="http://www.example.org/ontology#Contract_User8">
+        <rdf:type rdf:resource="http://www.example.org/ontology#Contract"/>
         <rdf:type rdf:resource="&ont;OneWayContract"/>
         <contractID>1001</contractID>
         <terms>Home meeting</terms>
@@ -1094,6 +1104,7 @@
     <!-- http://www.example.org/ontology#Contract_User9 -->
 
     <owl:NamedIndividual rdf:about="http://www.example.org/ontology#Contract_User9">
+        <rdf:type rdf:resource="http://www.example.org/ontology#Contract"/>
         <rdf:type rdf:resource="http://www.example.org/ontology#TradeContract"/>
         <terms>Home meeting</terms>
         <contractID>1001</contractID>
@@ -1226,6 +1237,7 @@
     <!-- http://www.example.org/ontology#Inventory_User1 -->
 
     <owl:NamedIndividual rdf:about="http://www.example.org/ontology#Inventory_User1">
+        <rdf:type rdf:resource="http://www.example.org/ontology#Inventory"/>
         <rdf:type rdf:resource="http://www.example.org/ontology#BusinessInventory"/>
         <inventoryID>1</inventoryID>
         <contains rdf:resource="http://www.example.org/ontology#Product_User1"/>
@@ -1236,6 +1248,7 @@
     <!-- http://www.example.org/ontology#Inventory_User10 -->
 
     <owl:NamedIndividual rdf:about="http://www.example.org/ontology#Inventory_User10">
+        <rdf:type rdf:resource="http://www.example.org/ontology#Inventory"/>
         <rdf:type rdf:resource="http://www.example.org/ontology#PersonalInventory"/>
         <inventoryID>10</inventoryID>
         <contains rdf:resource="http://www.example.org/ontology#Product_User10"/>
@@ -1246,6 +1259,7 @@
     <!-- http://www.example.org/ontology#Inventory_User2 -->
 
     <owl:NamedIndividual rdf:about="http://www.example.org/ontology#Inventory_User2">
+        <rdf:type rdf:resource="http://www.example.org/ontology#Inventory"/>
         <rdf:type rdf:resource="http://www.example.org/ontology#BusinessInventory"/>
         <inventoryID>2</inventoryID>
         <contains rdf:resource="http://www.example.org/ontology#Product_User2"/>
@@ -1256,6 +1270,7 @@
     <!-- http://www.example.org/ontology#Inventory_User3 -->
 
     <owl:NamedIndividual rdf:about="http://www.example.org/ontology#Inventory_User3">
+        <rdf:type rdf:resource="http://www.example.org/ontology#Inventory"/>
         <rdf:type rdf:resource="http://www.example.org/ontology#BusinessInventory"/>
         <inventoryID>3</inventoryID>
         <contains rdf:resource="http://www.example.org/ontology#Product_User3"/>
@@ -1266,6 +1281,7 @@
     <!-- http://www.example.org/ontology#Inventory_User4 -->
 
     <owl:NamedIndividual rdf:about="http://www.example.org/ontology#Inventory_User4">
+        <rdf:type rdf:resource="http://www.example.org/ontology#Inventory"/>
         <rdf:type rdf:resource="http://www.example.org/ontology#PersonalInventory"/>
         <inventoryID>4</inventoryID>
         <contains rdf:resource="http://www.example.org/ontology#Product_User4"/>
@@ -1276,6 +1292,7 @@
     <!-- http://www.example.org/ontology#Inventory_User5 -->
 
     <owl:NamedIndividual rdf:about="http://www.example.org/ontology#Inventory_User5">
+        <rdf:type rdf:resource="http://www.example.org/ontology#Inventory"/>
         <rdf:type rdf:resource="http://www.example.org/ontology#PersonalInventory"/>
         <inventoryID>5</inventoryID>
         <contains rdf:resource="http://www.example.org/ontology#Product_User5"/>
@@ -1286,6 +1303,7 @@
     <!-- http://www.example.org/ontology#Inventory_User6 -->
 
     <owl:NamedIndividual rdf:about="http://www.example.org/ontology#Inventory_User6">
+        <rdf:type rdf:resource="http://www.example.org/ontology#Inventory"/>
         <rdf:type rdf:resource="http://www.example.org/ontology#PersonalInventory"/>
         <inventoryID>6</inventoryID>
         <contains rdf:resource="http://www.example.org/ontology#Product_User6"/>
@@ -1296,6 +1314,7 @@
     <!-- http://www.example.org/ontology#Inventory_User7 -->
 
     <owl:NamedIndividual rdf:about="http://www.example.org/ontology#Inventory_User7">
+        <rdf:type rdf:resource="http://www.example.org/ontology#Inventory"/>
         <rdf:type rdf:resource="http://www.example.org/ontology#PersonalInventory"/>
         <inventoryID>7</inventoryID>
         <contains rdf:resource="http://www.example.org/ontology#Product_User7"/>
@@ -1306,6 +1325,7 @@
     <!-- http://www.example.org/ontology#Inventory_User8 -->
 
     <owl:NamedIndividual rdf:about="http://www.example.org/ontology#Inventory_User8">
+        <rdf:type rdf:resource="http://www.example.org/ontology#Inventory"/>
         <rdf:type rdf:resource="http://www.example.org/ontology#BusinessInventory"/>
         <inventoryID>8</inventoryID>
         <contains rdf:resource="http://www.example.org/ontology#Product_User8"/>
@@ -1316,6 +1336,7 @@
     <!-- http://www.example.org/ontology#Inventory_User9 -->
 
     <owl:NamedIndividual rdf:about="http://www.example.org/ontology#Inventory_User9">
+        <rdf:type rdf:resource="http://www.example.org/ontology#Inventory"/>
         <rdf:type rdf:resource="http://www.example.org/ontology#BusinessInventory"/>
         <inventoryID>9</inventoryID>
         <contains rdf:resource="http://www.example.org/ontology#Product_User9"/>
