@@ -53,7 +53,7 @@ public class Contract {
     }
 
 
-    @GetMapping("/list")
+    @GetMapping("/Allcontract")
     public String getContracts() {
         String qexec = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n" +
                 " PREFIX owl: <http://www.w3.org/2002/07/owl#>\n" +
@@ -69,6 +69,7 @@ public class Contract {
                 "             ns1:signed ?user ;\n" +
                 "             ns1:terms ?terms .\n" +
                 "}\n";
+
 
         Model model = JenaEngine.readModel("data/final.owl");
         QueryExecution qe = QueryExecutionFactory.create(qexec, model);
