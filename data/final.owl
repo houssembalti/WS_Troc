@@ -2207,7 +2207,7 @@
            <name>malek abbes</name>
            <email>malek.abbess@esprit.tn</email>
            <userID>7</userID>
-           <location>Tataouine</location>
+           <location>Tunis</location>
            <creates rdf:resource="http://www.example.org/ontology#Forum_User7"/>
            <sends rdf:resource="http://www.example.org/ontology#Message_User7"/>
            <initiates rdf:resource="http://www.example.org/ontology#Request_User7"/>
