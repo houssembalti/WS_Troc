@@ -1833,111 +1833,124 @@
     
 
 
+
     <!-- http://www.example.org/ontology#Request_User1 -->
 
     <owl:NamedIndividual rdf:about="http://www.example.org/ontology#Request_User1">
-        <rdf:type rdf:resource="http://www.example.org/ontology#TradeRequest"/>
+        <rdf:type rdf:resource="http://www.example.org/ontology#Request"/>
+
         <status>Open</status>
         <requestID>001</requestID>
         <involves rdf:resource="http://www.example.org/ontology#User1"/>
+         <involves rdf:resource="http://www.example.org/ontology#User4"/>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.example.org/ontology#Request_User10 -->
 
     <owl:NamedIndividual rdf:about="http://www.example.org/ontology#Request_User10">
-        <rdf:type rdf:resource="http://www.example.org/ontology#TradeRequest"/>
-        <status>Closed</status>
+   <rdf:type rdf:resource="http://www.example.org/ontology#Request"/>
+    <status>Closed</status>
         <requestID>002</requestID>
         <involves rdf:resource="http://www.example.org/ontology#User10"/>
+         <involves rdf:resource="http://www.example.org/ontology#User8"/>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.example.org/ontology#Request_User2 -->
 
     <owl:NamedIndividual rdf:about="http://www.example.org/ontology#Request_User2">
-        <rdf:type rdf:resource="http://www.example.org/ontology#TradeRequest"/>
+           <rdf:type rdf:resource="http://www.example.org/ontology#Request"/>
         <requestID>003</requestID>
         <status>Open</status>
         <involves rdf:resource="http://www.example.org/ontology#User2"/>
+         <involves rdf:resource="http://www.example.org/ontology#User2"/>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.example.org/ontology#Request_User3 -->
 
     <owl:NamedIndividual rdf:about="http://www.example.org/ontology#Request_User3">
-        <rdf:type rdf:resource="http://www.example.org/ontology#ServiceRequest"/>
+          <rdf:type rdf:resource="http://www.example.org/ontology#Request"/>
         <requestID>004</requestID>
         <status>Closed</status>
         <involves rdf:resource="http://www.example.org/ontology#User3"/>
+         <involves rdf:resource="http://www.example.org/ontology#User6"/>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.example.org/ontology#Request_User4 -->
 
     <owl:NamedIndividual rdf:about="http://www.example.org/ontology#Request_User4">
+       <rdf:type rdf:resource="http://www.example.org/ontology#Request"/>
         <requestID>005</requestID>
         <status>Open</status>
         <involves rdf:resource="http://www.example.org/ontology#User4"/>
+         <involves rdf:resource="http://www.example.org/ontology#User10"/>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.example.org/ontology#Request_User5 -->
 
     <owl:NamedIndividual rdf:about="http://www.example.org/ontology#Request_User5">
-        <rdf:type rdf:resource="http://www.example.org/ontology#TradeRequest"/>
+           <rdf:type rdf:resource="http://www.example.org/ontology#Request"/>
         <requestID>006</requestID>
         <status>Closed</status>
         <involves rdf:resource="http://www.example.org/ontology#User5"/>
+         <involves rdf:resource="http://www.example.org/ontology#User1"/>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.example.org/ontology#Request_User6 -->
 
     <owl:NamedIndividual rdf:about="http://www.example.org/ontology#Request_User6">
-        <rdf:type rdf:resource="http://www.example.org/ontology#TradeRequest"/>
+           <rdf:type rdf:resource="http://www.example.org/ontology#Request"/>
         <status>Open</status>
         <requestID>007</requestID>
         <involves rdf:resource="http://www.example.org/ontology#User6"/>
+         <involves rdf:resource="http://www.example.org/ontology#User3"/>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.example.org/ontology#Request_User7 -->
 
     <owl:NamedIndividual rdf:about="http://www.example.org/ontology#Request_User7">
-        <rdf:type rdf:resource="http://www.example.org/ontology#TradeRequest"/>
+         <rdf:type rdf:resource="http://www.example.org/ontology#Request"/>
         <requestID>008</requestID>
         <status>Closed</status>
         <involves rdf:resource="http://www.example.org/ontology#User7"/>
+        <involves rdf:resource="http://www.example.org/ontology#User5"/>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.example.org/ontology#Request_User8 -->
 
     <owl:NamedIndividual rdf:about="http://www.example.org/ontology#Request_User8">
-        <rdf:type rdf:resource="http://www.example.org/ontology#TradeRequest"/>
+           <rdf:type rdf:resource="http://www.example.org/ontology#Request"/>
         <requestID>009</requestID>
         <status>Open</status>
         <involves rdf:resource="http://www.example.org/ontology#User8"/>
+         <involves rdf:resource="http://www.example.org/ontology#User7"/>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.example.org/ontology#Request_User9 -->
 
     <owl:NamedIndividual rdf:about="http://www.example.org/ontology#Request_User9">
-        <rdf:type rdf:resource="http://www.example.org/ontology#ServiceRequest"/>
+          <rdf:type rdf:resource="http://www.example.org/ontology#Request"/>
         <requestID>010</requestID>
         <status>Closed</status>
         <involves rdf:resource="http://www.example.org/ontology#User9"/>
+        <involves rdf:resource="http://www.example.org/ontology#User1"/>
     </owl:NamedIndividual>
     
 
