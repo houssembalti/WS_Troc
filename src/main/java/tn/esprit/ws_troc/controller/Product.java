@@ -1,6 +1,5 @@
 package tn.esprit.ws_troc.controller;
 
-
 import org.apache.jena.query.QueryExecution;
 import org.apache.jena.query.QueryExecutionFactory;
 import org.apache.jena.query.ResultSet;
@@ -14,153 +13,141 @@ import tn.esprit.ws_troc.tools.JenaEngine;
 import java.io.ByteArrayOutputStream;
 
 @RestController
-@RequestMapping(path = "/api/user",produces = "application/json")
+@RequestMapping(path = "/api/products",produces = "application/json")
 @CrossOrigin(origins = "*")
-public class user {
-    @GetMapping("/getallusers")
-    public String getusers() {
-        String qexec =  "  PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n" +
+public class Product {
+    @GetMapping("/list")
+    public String getProducts() {
+        String qexec = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n" +
+                " PREFIX owl: <http://www.w3.org/2002/07/owl#>\n" +
+                " PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n" +
+                " PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n" +
                 " PREFIX ns1: <http://www.example.org/ontology#>\n" +
                 "\n" +
-                "SELECT ?name ?email ?username ?location\n" +
+
+                "SELECT ?name ?productID ?category ?user ?description \n" +
                 "WHERE {\n" +
-                "  ?individual rdf:type ns1:User ;\n" +
-                " ns1:name ?name ;\n" +
-                " ns1:email ?email ;\n" +
-                " ns1:username ?username ;\n" +
-                " ns1:location ?location .\n" +
+                "   ?individual rdf:type ns1:Product ;\n" +
+                "             ns1:name ?name ;\n" +
+                "             ns1:productID ?productID ;\n" +
+                "             ns1:category ?category ;\n" +
+                "             ns1:belongs ?user ;\n" +
+                "             ns1:description ?description .\n" +
                 "}\n";
 
         Model model = JenaEngine.readModel("data/final.owl");
-
         QueryExecution qe = QueryExecutionFactory.create(qexec, model);
         ResultSet results = qe.execSelect();
-
         // write to a ByteArrayOutputStream
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-
         ResultSetFormatter.outputAsJSON(outputStream, results);
-
         // and turn that into a String
         String json = new String(outputStream.toByteArray());
-
         JSONObject j = new JSONObject(json);
         System.out.println(j.getJSONObject("results").getJSONArray("bindings"));
-
         JSONArray res = j.getJSONObject("results").getJSONArray("bindings");
-
-
         return j.getJSONObject("results").getJSONArray("bindings").toString();
     }
-    @GetMapping("/guests")
-    public String getguest() {
-        String qexec =  "  PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n" +
+
+    @GetMapping("/getByType")
+    public String getTypeProducts(@RequestParam("type") String type) {
+        String qexec = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n" +
+                " PREFIX owl: <http://www.w3.org/2002/07/owl#>\n" +
+                " PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n" +
+                " PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n" +
                 " PREFIX ns1: <http://www.example.org/ontology#>\n" +
                 "\n" +
-                "SELECT ?name ?email ?username ?location\n" +
+
+                "SELECT ?name ?productID ?category ?user ?description \n" +
                 "WHERE {\n" +
-                "  ?individual rdf:type ns1:guest ;\n" +
-                " ns1:name ?name ;\n" +
-                " ns1:email ?email ;\n" +
-                " ns1:username ?username ;\n" +
-                " ns1:location ?location .\n" +
+                "   ?individual rdf:type ns1:" + type + " ;\n" +
+                "             ns1:name ?name ;\n" +
+                "             ns1:productID ?productID ;\n" +
+                "             ns1:category ?category ;\n" +
+                "             ns1:belongs ?user ;\n" +
+                "             ns1:description ?description .\n" +
                 "}\n";
 
-        Model model = JenaEngine.readModel("data/final.owl");
 
+        Model model = JenaEngine.readModel("data/final.owl");
         QueryExecution qe = QueryExecutionFactory.create(qexec, model);
         ResultSet results = qe.execSelect();
-
         // write to a ByteArrayOutputStream
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-
         ResultSetFormatter.outputAsJSON(outputStream, results);
-
         // and turn that into a String
         String json = new String(outputStream.toByteArray());
-
         JSONObject j = new JSONObject(json);
         System.out.println(j.getJSONObject("results").getJSONArray("bindings"));
-
         JSONArray res = j.getJSONObject("results").getJSONArray("bindings");
-
-
         return j.getJSONObject("results").getJSONArray("bindings").toString();
     }
-    @GetMapping("/filteruser/{location}")
-    public String getuserbylocation(@PathVariable("location") String location) {
-        System.out.println(location);
-        String qexec =  "  PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n" +
+
+    @GetMapping("/getByCategory")
+    public String getCategoryProducts(@RequestParam("category") String category) {
+        String qexec = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n" +
+                " PREFIX owl: <http://www.w3.org/2002/07/owl#>\n" +
+                " PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n" +
+                " PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n" +
                 " PREFIX ns1: <http://www.example.org/ontology#>\n" +
                 "\n" +
-                "SELECT ?name ?email ?username ?location\n" +
-                "WHERE {\n" +
-                "  ?individual rdf:type ns1:User;\n" +
-                " ns1:name ?name ;\n" +
-                " ns1:email ?email ;\n" +
-                " ns1:username ?username ;\n" +
-                " ns1:location ?location .\n" +
-                "  FILTER (?location = \""+location+ "\") \n"+
 
+                "SELECT ?name ?productID ?category ?user ?description \n" +
+                "WHERE {\n" +
+                "   ?individual rdf:type ns1:Product ;\n" +
+                "             ns1:name ?name ;\n" +
+                "             ns1:productID ?productID ;\n" +
+                "             ns1:category ?category ;\n" +
+                "             ns1:belongs ?user ;\n" +
+                "             ns1:description ?description .\n" +
+                "   FILTER ( ?category = \"" + category + "\")\n" +
                 "}\n";
 
-        Model model = JenaEngine.readModel("data/final.owl");
 
+        Model model = JenaEngine.readModel("data/final.owl");
         QueryExecution qe = QueryExecutionFactory.create(qexec, model);
         ResultSet results = qe.execSelect();
-
         // write to a ByteArrayOutputStream
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-
         ResultSetFormatter.outputAsJSON(outputStream, results);
-
         // and turn that into a String
         String json = new String(outputStream.toByteArray());
-        System.out.println(json);
         JSONObject j = new JSONObject(json);
         System.out.println(j.getJSONObject("results").getJSONArray("bindings"));
-
         JSONArray res = j.getJSONObject("results").getJSONArray("bindings");
-
-
         return j.getJSONObject("results").getJSONArray("bindings").toString();
     }
-    @GetMapping("/request/{id}")
-    public String getusersfromrequest(@PathVariable("id") String id) {
-    System.out.println(id);
-        String qexec =  "  PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n" +
-                " PREFIX ns1: <http://www.example.org/ontology#>\n" +
+    @GetMapping("/getProductsRelations")
+    public String getProductsRelations() {
+        String qexec = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n" +
+                "PREFIX owl: <http://www.w3.org/2002/07/owl#>\n" +
+                "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n" +
+                "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n" +
+                "PREFIX ns1: <http://www.example.org/ontology#>\n" +
                 "\n" +
-                "SELECT ?requestID ?status ?name \n" +
+                "SELECT ?name ?productID ?category ?description ?userName ?userEmail\n" +
                 "WHERE {\n" +
-                "   ?individual rdf:type ns1:Request ;\n" +
-                "             ns1:requestID ?requestID ;\n" +
-                "             ns1:status ?status ;\n" +
-                "  FILTER (?requestID = \"" + id + "\") .\n" +
-
-                "  ?individual      ns1:involves ?user.\n" +
-                "   ?user ns1:name ?name ;\n" +
+                "   ?individual rdf:type ns1:Product ;\n" +
+                "             ns1:name ?name ;\n" +
+                "             ns1:productID ?productID ;\n" +
+                "             ns1:category ?category ;\n" +
+                "             ns1:description ?description ;\n" +
+                "             ns1:belongs ?user.\n" +
+                "   ?user ns1:name ?userName ;\n" +
+                "         ns1:email ?userEmail.\n" +
                 "}\n";
 
         Model model = JenaEngine.readModel("data/final.owl");
-
         QueryExecution qe = QueryExecutionFactory.create(qexec, model);
         ResultSet results = qe.execSelect();
-
         // write to a ByteArrayOutputStream
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-
         ResultSetFormatter.outputAsJSON(outputStream, results);
-
         // and turn that into a String
         String json = new String(outputStream.toByteArray());
-        System.out.println(json);
         JSONObject j = new JSONObject(json);
         System.out.println(j.getJSONObject("results").getJSONArray("bindings"));
-
         JSONArray res = j.getJSONObject("results").getJSONArray("bindings");
-
-
         return j.getJSONObject("results").getJSONArray("bindings").toString();
     }
 }
