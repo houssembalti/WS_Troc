@@ -19,8 +19,10 @@ import java.io.ByteArrayOutputStream;
 @RequestMapping(path = "/api/reclamation",produces = "application/json")
 @CrossOrigin(origins = "*")
 public class Reclamation {
-    @GetMapping("/admins")
+
+    @GetMapping("/all")
     public String getAdmin() {
+
         String qexec = "  PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n" +
                 " PREFIX owl: <http://www.w3.org/2002/07/owl#>\n" +
                 " PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n" +
@@ -28,17 +30,22 @@ public class Reclamation {
                 " PREFIX ns1: <http://www.example.org/ontology#>\n" +
 
                 "\n" +
-                "SELECT ?name\n" +
+
+                "SELECT ?reportID ?description ?type ?user ?userName ?userEmail\n" +
                 "WHERE {\n" +
-                "  ?individual rdf:type ns1:IndividualUser ;\n" +
-                " ns1:name ?name .\n" +
+                "  ?individual rdf:type ns1:ContentReport ;\n" +
+                "            ns1:reportID ?reportID ;\n" +
+                "            ns1:description ?description ;\n" +
+                "            ns1:type ?type ;\n" +
+                "            ns1:collects ?user .\n" +
+                "   ?user ns1:name ?userName ;\n" +
+                "         ns1:email ?userEmail.\n" +
                 "}\n";
 
         Model model = JenaEngine.readModel("data/final.owl");
 
         QueryExecution qe = QueryExecutionFactory.create(qexec, model);
         ResultSet results = qe.execSelect();
-
         // write to a ByteArrayOutputStream
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
 
