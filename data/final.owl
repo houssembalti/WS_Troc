@@ -875,10 +875,10 @@
     <!-- http://www.co-ode.org/ontologies/ont.owl#Payment_User1 -->
 
     <owl:NamedIndividual rdf:about="&ont;Payment_User1">
-        <rdf:type rdf:resource="&ont;Cash"/>
-        <ont:PaymentID>1</ont:PaymentID>
-        <ont:Price>100</ont:Price>
-        <ont:payedby rdf:resource="http://www.example.org/ontology#User1"/>
+        <rdf:type rdf:resource="http://www.example.org/ontology#Payment"/>
+        <PaymentID>1</PaymentID>
+        <Price>100</Price>
+        <payedby rdf:resource="http://www.example.org/ontology#User1"/>
     </owl:NamedIndividual>
     
 
@@ -886,10 +886,10 @@
     <!-- http://www.co-ode.org/ontologies/ont.owl#Payment_User10 -->
 
     <owl:NamedIndividual rdf:about="&ont;Payment_User10">
-        <rdf:type rdf:resource="&ont;CreditCard"/>
-        <ont:PaymentID>10</ont:PaymentID>
-        <ont:Price>100</ont:Price>
-        <ont:payedby rdf:resource="http://www.example.org/ontology#User10"/>
+        <rdf:type rdf:resource="http://www.example.org/ontology#Payment"/>
+        <PaymentID>10</PaymentID>
+        <Price>100</Price>
+        <payedby rdf:resource="http://www.example.org/ontology#User10"/>
     </owl:NamedIndividual>
     
 
@@ -897,10 +897,10 @@
     <!-- http://www.co-ode.org/ontologies/ont.owl#Payment_User2 -->
 
     <owl:NamedIndividual rdf:about="&ont;Payment_User2">
-        <rdf:type rdf:resource="&ont;CreditCard"/>
-        <ont:Price>100</ont:Price>
-        <ont:PaymentID>2</ont:PaymentID>
-        <ont:payedby rdf:resource="http://www.example.org/ontology#User2"/>
+        <rdf:type rdf:resource="http://www.example.org/ontology#Payment"/>
+        <Price>100</Price>
+        <PaymentID>2</PaymentID>
+        <payedby rdf:resource="http://www.example.org/ontology#User2"/>
     </owl:NamedIndividual>
     
 
@@ -908,10 +908,10 @@
     <!-- http://www.co-ode.org/ontologies/ont.owl#Payment_User3 -->
 
     <owl:NamedIndividual rdf:about="&ont;Payment_User3">
-        <rdf:type rdf:resource="&ont;Cash"/>
-        <ont:Price>100</ont:Price>
-        <ont:PaymentID>3</ont:PaymentID>
-        <ont:payedby rdf:resource="http://www.example.org/ontology#User3"/>
+        <rdf:type rdf:resource="http://www.example.org/ontology#Payment"/>
+        <Price>100</Price>
+        <PaymentID>3</PaymentID>
+        <payedby rdf:resource="http://www.example.org/ontology#User3"/>
     </owl:NamedIndividual>
     
 
@@ -919,11 +919,11 @@
     <!-- http://www.co-ode.org/ontologies/ont.owl#Payment_User4 -->
 
     <owl:NamedIndividual rdf:about="&ont;Payment_User4">
-        <rdf:type rdf:resource="&ont;CreditCard"/>
-        <ont:Type>CreditCard</ont:Type>
-        <ont:Price>100</ont:Price>
-        <ont:PaymentID>4</ont:PaymentID>
-        <ont:payedby rdf:resource="http://www.example.org/ontology#User4"/>
+        <rdf:type rdf:resource="http://www.example.org/ontology#Payment"/>
+        <Type>CreditCard</Type>
+        <Price>100</Price>
+        <PaymentID>4</PaymentID>
+        <payedby rdf:resource="http://www.example.org/ontology#User4"/>
     </owl:NamedIndividual>
     
 
@@ -931,10 +931,10 @@
     <!-- http://www.co-ode.org/ontologies/ont.owl#Payment_User5 -->
 
     <owl:NamedIndividual rdf:about="&ont;Payment_User5">
-        <rdf:type rdf:resource="&ont;Cash"/>
-        <ont:Price>100</ont:Price>
-        <ont:PaymentID>5</ont:PaymentID>
-        <ont:payedby rdf:resource="http://www.example.org/ontology#User5"/>
+        <rdf:type rdf:resource="http://www.example.org/ontology#Payment"/>
+        <Price>100</Price>
+        <PaymentID>5</PaymentID>
+        <payedby rdf:resource="http://www.example.org/ontology#User5"/>
     </owl:NamedIndividual>
     
 
@@ -942,10 +942,10 @@
     <!-- http://www.co-ode.org/ontologies/ont.owl#Payment_User6 -->
 
     <owl:NamedIndividual rdf:about="&ont;Payment_User6">
-        <rdf:type rdf:resource="&ont;CreditCard"/>
-        <ont:PaymentID>6</ont:PaymentID>
-        <ont:Price>100</ont:Price>
-        <ont:payedby rdf:resource="http://www.example.org/ontology#User6"/>
+        <rdf:type rdf:resource="http://www.example.org/ontology#Payment"/>
+        <PaymentID>6</PaymentID>
+        <Price>100</Price>
+        <payedby rdf:resource="http://www.example.org/ontology#User6"/>
     </owl:NamedIndividual>
     
 
@@ -953,10 +953,10 @@
     <!-- http://www.co-ode.org/ontologies/ont.owl#Payment_User7 -->
 
     <owl:NamedIndividual rdf:about="&ont;Payment_User7">
-        <rdf:type rdf:resource="&ont;Cash"/>
-        <ont:PaymentID>7</ont:PaymentID>
-        <ont:Price>100</ont:Price>
-        <ont:payedby rdf:resource="http://www.example.org/ontology#User7"/>
+        <rdf:type rdf:resource="http://www.example.org/ontology#Payment"/>
+        <PaymentID>7</PaymentID>
+        <Price>100</Price>
+        <payedby rdf:resource="http://www.example.org/ontology#User7"/>
     </owl:NamedIndividual>
     
 
@@ -964,10 +964,10 @@
     <!-- http://www.co-ode.org/ontologies/ont.owl#Payment_User8 -->
 
     <owl:NamedIndividual rdf:about="&ont;Payment_User8">
-        <rdf:type rdf:resource="&ont;CreditCard"/>
-        <ont:PaymentID>8</ont:PaymentID>
-        <ont:Price>100</ont:Price>
-        <ont:payedby rdf:resource="http://www.example.org/ontology#User8"/>
+        <rdf:type rdf:resource="http://www.example.org/ontology#Payment"/>
+        <PaymentID>8</PaymentID>
+        <Price>100</Price>
+        <payedby rdf:resource="http://www.example.org/ontology#User8"/>
     </owl:NamedIndividual>
     
 
@@ -975,10 +975,10 @@
     <!-- http://www.co-ode.org/ontologies/ont.owl#Payment_User9 -->
 
     <owl:NamedIndividual rdf:about="&ont;Payment_User9">
-        <rdf:type rdf:resource="&ont;Cash"/>
-        <ont:PaymentID>9</ont:PaymentID>
-        <ont:Price>100</ont:Price>
-        <ont:payedby rdf:resource="http://www.example.org/ontology#User9"/>
+        <rdf:type rdf:resource="http://www.example.org/ontology#Payment"/>
+        <PaymentID>9</PaymentID>
+        <Price>100</Price>
+        <payedby rdf:resource="http://www.example.org/ontology#User9"/>
     </owl:NamedIndividual>
     
 
