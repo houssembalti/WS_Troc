@@ -55,7 +55,7 @@ public class Inventory {
                 "   ?inventory rdf:type ns1:" + type + " ;\n" +
                 "              ns1:inventoryID ?inventoryID ;\n" +
                 "              ns1:contains ?product .\n" +
-                
+
                 "}\n";
 
         Model model = JenaEngine.readModel("data/final.owl");

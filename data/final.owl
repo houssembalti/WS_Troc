@@ -1223,7 +1223,7 @@
     
 
 
-    <!-- http://www.example.org/ontology#Inventory_User1 -->
+   <!-- http://www.example.org/ontology#Inventory_User1 -->
 
     <owl:NamedIndividual rdf:about="http://www.example.org/ontology#Inventory_User1">
         <rdf:type rdf:resource="http://www.example.org/ontology#BusinessInventory"/>
