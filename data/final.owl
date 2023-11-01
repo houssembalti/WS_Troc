@@ -876,10 +876,10 @@
     <!-- http://www.co-ode.org/ontologies/ont.owl#Payment_User1 -->
 
     <owl:NamedIndividual rdf:about="&ont;Payment_User1">
-        <rdf:type rdf:resource="&ont;Cash"/>
-        <ont:PaymentID>1</ont:PaymentID>
-        <ont:Price>100</ont:Price>
-        <ont:payedby rdf:resource="http://www.example.org/ontology#User1"/>
+        <rdf:type rdf:resource="http://www.example.org/ontology#Payment"/>
+        <PaymentID>1</PaymentID>
+        <Price>100</Price>
+        <payedby rdf:resource="http://www.example.org/ontology#User1"/>
     </owl:NamedIndividual>
     
 
@@ -887,10 +887,10 @@
     <!-- http://www.co-ode.org/ontologies/ont.owl#Payment_User10 -->
 
     <owl:NamedIndividual rdf:about="&ont;Payment_User10">
-        <rdf:type rdf:resource="&ont;CreditCard"/>
-        <ont:PaymentID>10</ont:PaymentID>
-        <ont:Price>100</ont:Price>
-        <ont:payedby rdf:resource="http://www.example.org/ontology#User10"/>
+        <rdf:type rdf:resource="http://www.example.org/ontology#Payment"/>
+        <PaymentID>10</PaymentID>
+        <Price>100</Price>
+        <payedby rdf:resource="http://www.example.org/ontology#User10"/>
     </owl:NamedIndividual>
     
 
@@ -898,10 +898,10 @@
     <!-- http://www.co-ode.org/ontologies/ont.owl#Payment_User2 -->
 
     <owl:NamedIndividual rdf:about="&ont;Payment_User2">
-        <rdf:type rdf:resource="&ont;CreditCard"/>
-        <ont:Price>100</ont:Price>
-        <ont:PaymentID>2</ont:PaymentID>
-        <ont:payedby rdf:resource="http://www.example.org/ontology#User2"/>
+        <rdf:type rdf:resource="http://www.example.org/ontology#Payment"/>
+        <Price>100</Price>
+        <PaymentID>2</PaymentID>
+        <payedby rdf:resource="http://www.example.org/ontology#User2"/>
     </owl:NamedIndividual>
     
 
@@ -909,10 +909,10 @@
     <!-- http://www.co-ode.org/ontologies/ont.owl#Payment_User3 -->
 
     <owl:NamedIndividual rdf:about="&ont;Payment_User3">
-        <rdf:type rdf:resource="&ont;Cash"/>
-        <ont:Price>100</ont:Price>
-        <ont:PaymentID>3</ont:PaymentID>
-        <ont:payedby rdf:resource="http://www.example.org/ontology#User3"/>
+        <rdf:type rdf:resource="http://www.example.org/ontology#Payment"/>
+        <Price>100</Price>
+        <PaymentID>3</PaymentID>
+        <payedby rdf:resource="http://www.example.org/ontology#User3"/>
     </owl:NamedIndividual>
     
 
@@ -920,11 +920,11 @@
     <!-- http://www.co-ode.org/ontologies/ont.owl#Payment_User4 -->
 
     <owl:NamedIndividual rdf:about="&ont;Payment_User4">
-        <rdf:type rdf:resource="&ont;CreditCard"/>
-        <ont:Type>CreditCard</ont:Type>
-        <ont:Price>100</ont:Price>
-        <ont:PaymentID>4</ont:PaymentID>
-        <ont:payedby rdf:resource="http://www.example.org/ontology#User4"/>
+        <rdf:type rdf:resource="http://www.example.org/ontology#Payment"/>
+        <Type>CreditCard</Type>
+        <Price>100</Price>
+        <PaymentID>4</PaymentID>
+        <payedby rdf:resource="http://www.example.org/ontology#User4"/>
     </owl:NamedIndividual>
     
 
@@ -932,10 +932,10 @@
     <!-- http://www.co-ode.org/ontologies/ont.owl#Payment_User5 -->
 
     <owl:NamedIndividual rdf:about="&ont;Payment_User5">
-        <rdf:type rdf:resource="&ont;Cash"/>
-        <ont:Price>100</ont:Price>
-        <ont:PaymentID>5</ont:PaymentID>
-        <ont:payedby rdf:resource="http://www.example.org/ontology#User5"/>
+        <rdf:type rdf:resource="http://www.example.org/ontology#Payment"/>
+        <Price>100</Price>
+        <PaymentID>5</PaymentID>
+        <payedby rdf:resource="http://www.example.org/ontology#User5"/>
     </owl:NamedIndividual>
     
 
@@ -943,10 +943,10 @@
     <!-- http://www.co-ode.org/ontologies/ont.owl#Payment_User6 -->
 
     <owl:NamedIndividual rdf:about="&ont;Payment_User6">
-        <rdf:type rdf:resource="&ont;CreditCard"/>
-        <ont:PaymentID>6</ont:PaymentID>
-        <ont:Price>100</ont:Price>
-        <ont:payedby rdf:resource="http://www.example.org/ontology#User6"/>
+        <rdf:type rdf:resource="http://www.example.org/ontology#Payment"/>
+        <PaymentID>6</PaymentID>
+        <Price>100</Price>
+        <payedby rdf:resource="http://www.example.org/ontology#User6"/>
     </owl:NamedIndividual>
     
 
@@ -954,10 +954,10 @@
     <!-- http://www.co-ode.org/ontologies/ont.owl#Payment_User7 -->
 
     <owl:NamedIndividual rdf:about="&ont;Payment_User7">
-        <rdf:type rdf:resource="&ont;Cash"/>
-        <ont:PaymentID>7</ont:PaymentID>
-        <ont:Price>100</ont:Price>
-        <ont:payedby rdf:resource="http://www.example.org/ontology#User7"/>
+        <rdf:type rdf:resource="http://www.example.org/ontology#Payment"/>
+        <PaymentID>7</PaymentID>
+        <Price>100</Price>
+        <payedby rdf:resource="http://www.example.org/ontology#User7"/>
     </owl:NamedIndividual>
     
 
@@ -965,10 +965,10 @@
     <!-- http://www.co-ode.org/ontologies/ont.owl#Payment_User8 -->
 
     <owl:NamedIndividual rdf:about="&ont;Payment_User8">
-        <rdf:type rdf:resource="&ont;CreditCard"/>
-        <ont:PaymentID>8</ont:PaymentID>
-        <ont:Price>100</ont:Price>
-        <ont:payedby rdf:resource="http://www.example.org/ontology#User8"/>
+        <rdf:type rdf:resource="http://www.example.org/ontology#Payment"/>
+        <PaymentID>8</PaymentID>
+        <Price>100</Price>
+        <payedby rdf:resource="http://www.example.org/ontology#User8"/>
     </owl:NamedIndividual>
     
 
@@ -976,10 +976,10 @@
     <!-- http://www.co-ode.org/ontologies/ont.owl#Payment_User9 -->
 
     <owl:NamedIndividual rdf:about="&ont;Payment_User9">
-        <rdf:type rdf:resource="&ont;Cash"/>
-        <ont:PaymentID>9</ont:PaymentID>
-        <ont:Price>100</ont:Price>
-        <ont:payedby rdf:resource="http://www.example.org/ontology#User9"/>
+        <rdf:type rdf:resource="http://www.example.org/ontology#Payment"/>
+        <PaymentID>9</PaymentID>
+        <Price>100</Price>
+        <payedby rdf:resource="http://www.example.org/ontology#User9"/>
     </owl:NamedIndividual>
     
 
@@ -1731,7 +1731,7 @@
     <owl:NamedIndividual rdf:about="http://www.example.org/ontology#ReportSys_User1">
         <rdf:type rdf:resource="http://www.example.org/ontology#ContentReport"/>
         <reportID rdf:datatype="&xsd;decimal">1</reportID>
-        <ont:description>ce produit ne convient pas a la description de produit</ont:description>
+        <description>ce produit ne convient pas a la description de produit</description>
         <type>URGENT</type>
         <collects rdf:resource="http://www.example.org/ontology#User1"/>
     </owl:NamedIndividual>
@@ -1743,7 +1743,7 @@
     <owl:NamedIndividual rdf:about="http://www.example.org/ontology#ReportSys_User10">
         <rdf:type rdf:resource="http://www.example.org/ontology#ContentReport"/>
         <reportID rdf:datatype="&xsd;decimal">2</reportID>
-        <ont:description>ce produit est perimé</ont:description>
+        <description>ce produit est perimé</description>
         <type>URGENT</type>
         <collects rdf:resource="http://www.example.org/ontology#User10"/>
     </owl:NamedIndividual>
@@ -1756,7 +1756,7 @@
         <rdf:type rdf:resource="http://www.example.org/ontology#UserReport"/>
         <reportID rdf:datatype="&xsd;decimal">3</reportID>
         <type>URGENT</type>
-        <ont:description>Bonjour, je n&apos;ai pas encore reçu ma commande passée le 2 novembre. Pourriez-vous vérifier son statut ?</ont:description>
+        <description>Bonjour, je n&apos;ai pas encore reçu ma commande passée le 2 novembre. Pourriez-vous vérifier son statut ?</description>
     </owl:NamedIndividual>
     
 
@@ -1776,7 +1776,7 @@
         <rdf:type rdf:resource="http://www.example.org/ontology#UserReport"/>
         <reportID rdf:datatype="&xsd;decimal">4</reportID>
         <type>NOT_URGENT</type>
-        <ont:description>J&apos;ai reçu mon produit endommagé. Comment puis-je procéder à un échange ?</ont:description>
+        <description>J&apos;ai reçu mon produit endommagé. Comment puis-je procéder à un échange ?</description>
         <collects rdf:resource="http://www.example.org/ontology#User3"/>
     </owl:NamedIndividual>
     
@@ -1787,7 +1787,7 @@
     <owl:NamedIndividual rdf:about="http://www.example.org/ontology#ReportSys_User4">
         <rdf:type rdf:resource="http://www.example.org/ontology#UserReport"/>
         <reportID rdf:datatype="&xsd;decimal">5</reportID>
-        <ont:description>Le produit que j&apos;ai reçu ne correspond pas à ce que j&apos;ai commandé. Comment rectifier cela ?</ont:description>
+        <description>Le produit que j&apos;ai reçu ne correspond pas à ce que j&apos;ai commandé. Comment rectifier cela ?</description>
         <type>NOT_URGENT</type>
         <collects rdf:resource="http://www.example.org/ontology#User4"/>
     </owl:NamedIndividual>
@@ -1800,7 +1800,7 @@
         <rdf:type rdf:resource="http://www.example.org/ontology#ContentReport"/>
         <reportID rdf:datatype="&xsd;decimal">6</reportID>
         <type>NOT_URGENT</type>
-        <ont:description>J&apos;ai commandé le pull, mais j&apos;ai reçu un autre article. Pourriez-vous m&apos;aider ?</ont:description>
+        <description>J&apos;ai commandé le pull, mais j&apos;ai reçu un autre article. Pourriez-vous m&apos;aider ?</description>
         <collects rdf:resource="http://www.example.org/ontology#User5"/>
     </owl:NamedIndividual>
     
@@ -1812,7 +1812,7 @@
         <rdf:type rdf:resource="http://www.example.org/ontology#ContentReport"/>
         <reportID rdf:datatype="&xsd;decimal">7</reportID>
         <type>URGENT</type>
-        <ont:description>Mon produit est défectueux. Comment puis-je obtenir un remboursement ou un remplacement ?</ont:description>
+        <description>Mon produit est défectueux. Comment puis-je obtenir un remboursement ou un remplacement ?</description>
         <collects rdf:resource="http://www.example.org/ontology#User6"/>
     </owl:NamedIndividual>
     
@@ -1823,7 +1823,7 @@
     <owl:NamedIndividual rdf:about="http://www.example.org/ontology#ReportSys_User7">
         <rdf:type rdf:resource="http://www.example.org/ontology#UserReport"/>
         <reportID rdf:datatype="&xsd;decimal">8</reportID>
-        <ont:description>Je n&apos;ai pas reçu tous les articles de ma commande. Que dois-je faire ?</ont:description>
+        <description>Je n&apos;ai pas reçu tous les articles de ma commande. Que dois-je faire ?</description>
         <type>URGENT</type>
         <collects rdf:resource="http://www.example.org/ontology#User6"/>
         <collects rdf:resource="http://www.example.org/ontology#User7"/>
@@ -1836,7 +1836,7 @@
     <owl:NamedIndividual rdf:about="http://www.example.org/ontology#ReportSys_User8">
         <rdf:type rdf:resource="http://www.example.org/ontology#ContentReport"/>
         <reportID rdf:datatype="&xsd;decimal">9</reportID>
-        <ont:description>La qualité du produit que j&apos;ai reçu ne répond pas à mes attentes. Puis-je le retourner ?</ont:description>
+        <description>La qualité du produit que j&apos;ai reçu ne répond pas à mes attentes. Puis-je le retourner ?</description>
         <type>URGENT</type>
         <collects rdf:resource="http://www.example.org/ontology#User8"/>
     </owl:NamedIndividual>
@@ -1849,10 +1849,10 @@
         <rdf:type rdf:resource="http://www.example.org/ontology#UserReport"/>
         <reportID rdf:datatype="&xsd;decimal">10</reportID>
         <type>URGENT</type>
-        <ont:description>Le produit que j&apos;ai acheté ne fonctionne pas correctement. Qui dois-je contacter pour résoudre ce problème ?</ont:description>
+        <description>Le produit que j&apos;ai acheté ne fonctionne pas correctement. Qui dois-je contacter pour résoudre ce problème ?</description>
         <collects rdf:resource="http://www.example.org/ontology#User9"/>
     </owl:NamedIndividual>
-    
+
 
 
 
@@ -2229,7 +2229,7 @@
            <name>malek abbes</name>
            <email>malek.abbess@esprit.tn</email>
            <userID>7</userID>
-           <location>Tataouine</location>
+           <location>Tunis</location>
            <creates rdf:resource="http://www.example.org/ontology#Forum_User7"/>
            <sends rdf:resource="http://www.example.org/ontology#Message_User7"/>
            <initiates rdf:resource="http://www.example.org/ontology#Request_User7"/>
@@ -2276,4 +2276,3 @@
 
 
 <!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
-

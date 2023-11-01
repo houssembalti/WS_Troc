@@ -1,28 +1,23 @@
 package tn.esprit.ws_troc.controller;
 
-
 import org.apache.jena.query.QueryExecution;
 import org.apache.jena.query.QueryExecutionFactory;
 import org.apache.jena.query.ResultSet;
 import org.apache.jena.query.ResultSetFormatter;
 import org.apache.jena.rdf.model.Model;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-import tn.esprit.ws_troc.tools.JenaEngine;
 import org.json.JSONArray;
 import org.json.JSONObject;
+import org.springframework.web.bind.annotation.*;
+import tn.esprit.ws_troc.tools.JenaEngine;
+
 import java.io.ByteArrayOutputStream;
 
 @RestController
-@RequestMapping(path = "/api/reclamation",produces = "application/json")
+@RequestMapping(path = "/api/payment",produces = "application/json")
 @CrossOrigin(origins = "*")
-public class Reclamation {
-
-    @GetMapping("/all")
-    public String getAdmin() {
-
+public class Payement {
+    @GetMapping("/getall")
+    public String getusers() {
         String qexec = "  PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n" +
                 " PREFIX owl: <http://www.w3.org/2002/07/owl#>\n" +
                 " PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n" +
@@ -31,13 +26,12 @@ public class Reclamation {
 
                 "\n" +
 
-                "SELECT ?reportID ?description ?type ?user ?userName ?userEmail\n" +
+                "SELECT ?PaymentID ?Price ?user ?userName ?userEmail\n" +
                 "WHERE {\n" +
-                "  ?individual rdf:type ns1:ContentReport ;\n" +
-                "            ns1:reportID ?reportID ;\n" +
-                "            ns1:description ?description ;\n" +
-                "            ns1:type ?type ;\n" +
-                "            ns1:collects ?user .\n" +
+                "  ?individual rdf:type ns1:Payment ;\n" +
+                "            ns1:PaymentID ?PaymentID ;\n" +
+                "            ns1:Price ?Price ;\n" +
+                "            ns1:payedby ?user .\n" +
                 "   ?user ns1:name ?userName ;\n" +
                 "         ns1:email ?userEmail.\n" +
                 "}\n";
@@ -46,6 +40,7 @@ public class Reclamation {
 
         QueryExecution qe = QueryExecutionFactory.create(qexec, model);
         ResultSet results = qe.execSelect();
+
         // write to a ByteArrayOutputStream
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
 
