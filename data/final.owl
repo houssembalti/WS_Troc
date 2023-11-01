@@ -1014,6 +1014,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.example.org/ontology#Contract_User2">
         <rdf:type rdf:resource="http://www.example.org/ontology#Contract"/>
+        <rdf:type rdf:resource="http://www.example.org/ontology#OneWayContract"/>
         <rdf:type rdf:resource="&ont;OneWayContract"/>
         <contractID>1001</contractID>
         <terms>Home meeting</terms>
